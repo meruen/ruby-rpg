@@ -2,7 +2,6 @@
 # camera.rb
 
 class Camera
-	attr_reader :offset_x, :offset_y
 	attr_accessor :x, :y
 
 	def initialize(x = 0, y = 0)
