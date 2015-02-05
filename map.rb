@@ -10,10 +10,10 @@ class Map
 	attr_reader :chip, :w, :h
 	attr_accessor :events, :camera, :characters
 
-	ZMAP = -2
-	ZEV_BOT = 1
-	ZEV_TOP = -1
-	ZCHAR = 0		
+	ZMAP ||= -2
+	ZEV_BOT ||= 1
+	ZEV_TOP ||= -1
+	ZCHAR ||= 0		
 	TILE_SIZE ||= 32
 
 	def initialize(handle, filename, chip, rows, cols, background = nil, only_background = false)
