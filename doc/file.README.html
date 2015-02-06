@@ -65,11 +65,58 @@
 
 <p>A fast RPG Framework for Ruby using libgosu.</p>
 
+<h1>How to set up your Linux</h1>
+
+<ul>
+<li>You need to have <a href="https://www.ruby-lang.org/">Ruby</a> installed (2.1 is recomended).</li>
+<li>Install libgosu dependencies:</li>
+</ul>
+
+<blockquote>
+<p><code># apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev libsndfile-dev</code></p>
+</blockquote>
+
+<ul>
+<li>Install gosu gem:</li>
+</ul>
+
+<blockquote>
+<p><code>gem install gosu</code></p>
+</blockquote>
+
+<h1>How to set up your Windows</h1>
+
+<p>It&#39;s not so easy like Linux, but here is the steps:</p>
+
+<ul>
+<li><p>You need to have <a href="https://www.ruby-lang.org/">Ruby</a> installed. I really recomend this <a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.5.exe?direct">standalone</a>. Remember to add ruby executables to system path.</p></li>
+<li><p>Download the <a href="http://cdn.rubyinstaller.org/archives/devkits/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe">DevKit</a> and extract in some directory (ex.: C:/DK).</p></li>
+<li><p>Open CMD Prompt, enter in the DevKit directory and install. Example:</p></li>
+</ul>
+
+<blockquote>
+<p><code>cd C:/DK</code></p>
+
+<p><code>ruby dk.rb init</code></p>
+
+<p><code>ruby dk.rb install</code></p>
+</blockquote>
+
+<ul>
+<li>So install gosu gem and be happy:</li>
+</ul>
+
+<blockquote>
+<p><code>gem install gosu</code></p>
+</blockquote>
+
 <h1>Running examples</h1>
 
 <p>Clone the repository, and run some example from the main directory. Example: </p>
 
-<p>ruby example/example01.rb</p>
+<blockquote>
+<p><code>ruby example/example01.rb</code></p>
+</blockquote>
 
 <h1>Considerations</h1>
 
@@ -77,7 +124,7 @@
 </div></div>
 
     <div id="footer">
-  Generated on Fri Feb  6 14:36:25 2015 by
+  Generated on Fri Feb  6 15:08:41 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>
