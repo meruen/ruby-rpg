@@ -6,16 +6,36 @@ load 'camera.rb'
 load 'mod/Direction.rb'
 load 'mod/tile.rb'
 
+# This is the main class for managment of .map files. 
+# Note: ACCTUALY IS UNDER MAINTENANCE.
 class Map
-	attr_reader :chip, :w, :h
-	attr_accessor :events, :camera, :characters
-
+	# @return [String] Path to tilesed used to build map.
+	attr_reader :chip
+	# @return [Integer] Width of the map.
+	attr_reader :w
+	# @return [Integer] Height of the map.
+	attr_reader :h
+	# @return [Array] array of Events contained in the map.
+	attr_accessor :events
+	# @return [Camera] main Camera.
+	attr_accessor :camera
+	# @return [Array] array of Characters that will be on map (actually only one).
+	attr_accessor :characters
+	
 	ZMAP ||= -2
 	ZEV_BOT ||= 1
 	ZEV_TOP ||= -1
 	ZCHAR ||= 0		
+	# Fixed size of tiles.
 	TILE_SIZE ||= 32
 
+	# @param [Gamebox] handle Main Gamebox.
+	# @param [String] filename Path to tileset used to build map.
+	# @param [String] chip Path to .map file to be loaded.
+	# @param [Integer] rows Rowcount of your map.
+	# @param [Integer] cols Colcount of your map.
+	# @param [String] background Path to background that will be printed behind the chipset.
+	# @param [true/false] only_background True if you want that the chipset don't be printed.
 	def initialize(handle, filename, chip, rows, cols, background = nil, only_background = false)
 		@camera = Camera.new
 		@handle = handle
@@ -48,6 +68,8 @@ class Map
 		@last_key_x = @key_x
 	end
 
+	# Update all the events and all the characters there are on map.
+	# @return [void]
 	def update
 		@key_x = @handle.button_down? Gosu::KbX
 		@events.each do |event|	event.update 
@@ -77,6 +99,8 @@ class Map
 		@last_key_x = @key_x
 	end
 
+	# Draw the map, events and characters.
+	# @return [void]
 	def draw
 		@background.draw 0 - @camera.x, 0 - @camera.y, ZMAP if @background != nil
 		if not @only_background
@@ -91,6 +115,10 @@ class Map
 		@events.each do |event| event.draw end
 	end
 
+	# Check if an Character are colliding with an Event on map screen.
+	# @param [Character] char
+	# @param [Event] event
+	# @return [true/false] True if is colliding.
 	def colliding?(char, event)
 		case char.direction
 			when Direction::TOP
@@ -105,6 +133,11 @@ class Map
 		return false
 	end
 
+	# Check if the main character can continue to go at the direction.
+	# @param [Integer] x X coordinate
+	# @param [Integer] y Y coordinate
+	# @param [Direction] direction Direction to where character will follow.
+	# @return [true/false] True if can advance for direction specified.
 	def can_advance?(x, y, direction)
 		return true if x % TILE_SIZE != 0 || y % TILE_SIZE != 0	
 		block_x = x / TILE_SIZE

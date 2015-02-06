@@ -10,7 +10,6 @@ class Timer
 	# @param [Integer] interval Interval for the timer (in milliseconds).
 	def initialize(interval)
 		@interval = interval
-		@is_loop = is_loop
 		start	
 	end
 

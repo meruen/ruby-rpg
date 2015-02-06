@@ -99,7 +99,18 @@
 </dl>
 <div class="clear"></div>
 
-<div id="subclasses">
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class for playable characters.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="Event.html" title="Event (class)">Event</a></span></p>
 </div>
@@ -113,7 +124,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#block_x-instance_method" title="#block_x (instance method)">- (Object) <strong>block_x</strong> </a>
+      <a href="#block_x-instance_method" title="#block_x (instance method)">- (Integer) <strong>block_x</strong> </a>
     
 
     
@@ -131,7 +142,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute block_x.</p>
+<p>Tile block X coordinate.</p>
 </div></span>
   
 </li>
@@ -140,7 +151,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#block_y-instance_method" title="#block_y (instance method)">- (Object) <strong>block_y</strong> </a>
+      <a href="#block_y-instance_method" title="#block_y (instance method)">- (Integer) <strong>block_y</strong> </a>
     
 
     
@@ -158,7 +169,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute block_y.</p>
+<p>Tile block Y coordinate.</p>
 </div></span>
   
 </li>
@@ -167,7 +178,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#direction-instance_method" title="#direction (instance method)">- (Object) <strong>direction</strong> </a>
+      <a href="#direction-instance_method" title="#direction (instance method)">- (Direction) <strong>direction</strong> </a>
     
 
     
@@ -185,7 +196,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute direction.</p>
+<p>Current direction of character.</p>
 </div></span>
   
 </li>
@@ -194,7 +205,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#img-instance_method" title="#img (instance method)">- (Object) <strong>img</strong> </a>
+      <a href="#img-instance_method" title="#img (instance method)">- (Gosu::Image) <strong>img</strong> </a>
     
 
     
@@ -214,7 +225,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute img.</p>
+<p>Currently image there are be drawing.</p>
 </div></span>
   
 </li>
@@ -223,7 +234,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sensitive-instance_method" title="#sensitive (instance method)">- (Object) <strong>sensitive</strong> </a>
+      <a href="#sensitive-instance_method" title="#sensitive (instance method)">- (true/false) <strong>sensitive</strong> </a>
     
 
     
@@ -241,7 +252,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute sensitive.</p>
+<p>True if the character will respond to keyboard.</p>
 </div></span>
   
 </li>
@@ -250,7 +261,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#speed-instance_method" title="#speed (instance method)">- (Object) <strong>speed</strong> </a>
+      <a href="#speed-instance_method" title="#speed (instance method)">- (Integer) <strong>speed</strong> </a>
     
 
     
@@ -268,7 +279,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute speed.</p>
+<p>Movement speed.</p>
 </div></span>
   
 </li>
@@ -277,7 +288,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#state-instance_method" title="#state (instance method)">- (Object) <strong>state</strong> </a>
+      <a href="#state-instance_method" title="#state (instance method)">- (State) <strong>state</strong> </a>
     
 
     
@@ -295,7 +306,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute state.</p>
+<p>Current state of character.</p>
 </div></span>
   
 </li>
@@ -304,7 +315,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#visible-instance_method" title="#visible (instance method)">- (Object) <strong>visible</strong> </a>
+      <a href="#visible-instance_method" title="#visible (instance method)">- (true/false) <strong>visible</strong> </a>
     
 
     
@@ -322,7 +333,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute visible.</p>
+<p>Visibility of character.</p>
 </div></span>
   
 </li>
@@ -331,7 +342,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#x-instance_method" title="#x (instance method)">- (Object) <strong>x</strong> </a>
+      <a href="#x-instance_method" title="#x (instance method)">- (Integer) <strong>x</strong> </a>
     
 
     
@@ -349,7 +360,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute x.</p>
+<p>X coordinate.</p>
 </div></span>
   
 </li>
@@ -358,7 +369,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#y-instance_method" title="#y (instance method)">- (Object) <strong>y</strong> </a>
+      <a href="#y-instance_method" title="#y (instance method)">- (Integer) <strong>y</strong> </a>
     
 
     
@@ -376,7 +387,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute y.</p>
+<p>Y coordinate.</p>
 </div></span>
   
 </li>
@@ -398,7 +409,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">- (Object) <strong>draw</strong>(z = 0) </a>
+      <a href="#draw-instance_method" title="#draw (instance method)">- (void) <strong>draw</strong>(z = 0) </a>
     
 
     
@@ -412,7 +423,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Draw the character&#39;s sprite.</p>
+</div></span>
   
 </li>
 
@@ -446,7 +459,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#quaded%3F-instance_method" title="#quaded? (instance method)">- (Boolean) <strong>quaded?</strong> </a>
+      <a href="#quaded%3F-instance_method" title="#quaded? (instance method)">- (true/false) <strong>quaded?</strong> </a>
     
 
     
@@ -460,7 +473,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if characters graphic are in a location relative to the size of
+tiles.</p>
+</div></span>
   
 </li>
 
@@ -468,7 +484,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#read_keys-instance_method" title="#read_keys (instance method)">- (Object) <strong>read_keys</strong> </a>
+      <a href="#read_keys-instance_method" title="#read_keys (instance method)">- (void) <strong>read_keys</strong> </a>
     
 
     
@@ -482,7 +498,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Read the main input keys.</p>
+</div></span>
   
 </li>
 
@@ -490,7 +508,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_img-instance_method" title="#set_img (instance method)">- (Object) <strong>set_img</strong>(filename, hblock) </a>
+      <a href="#set_img-instance_method" title="#set_img (instance method)">- (void) <strong>set_img</strong>(filename, hblock) </a>
     
 
     
@@ -504,7 +522,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Set a new sprite for the character.</p>
+</div></span>
   
 </li>
 
@@ -512,7 +532,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_position-instance_method" title="#set_position (instance method)">- (Object) <strong>set_position</strong>(x, y) </a>
+      <a href="#set_location-instance_method" title="#set_location (instance method)">- (void) <strong>set_location</strong>(x, y) </a>
     
 
     
@@ -526,7 +546,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Set location of character.</p>
+</div></span>
   
 </li>
 
@@ -534,7 +556,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">- (Object) <strong>update</strong> </a>
+      <a href="#update-instance_method" title="#update (instance method)">- (void) <strong>update</strong> </a>
     
 
     
@@ -548,7 +570,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Check all conditions and do actions based on keyboard states, directions
+and states.</p>
+</div></span>
   
 </li>
 
@@ -556,7 +581,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#visible%3F-instance_method" title="#visible? (instance method)">- (Boolean) <strong>visible?</strong> </a>
+      <a href="#visible%3F-instance_method" title="#visible? (instance method)">- (true/false) <strong>visible?</strong> </a>
     
 
     
@@ -570,7 +595,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>True if character is visible.</p>
+</div></span>
   
 </li>
 
@@ -599,7 +626,151 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>handle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Gamebox.html" title="Gamebox (class)">Gamebox</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Main Gamebox.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Path to character&#39;s sprite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hblock</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>4</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Horizontal block count of sprite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>x</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>X coordinate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>y</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Y coordinate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>speed</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>2</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Movement speed.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>visible</span>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Visibility of character.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sensitive</span>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>True if the character will respond to keyboard.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -607,24 +778,24 @@
       <pre class="lines">
 
 
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30</pre>
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_hblock'>hblock</span> <span class='op'>=</span> <span class='int'>4</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_speed'>speed</span> <span class='op'>=</span> <span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_sensitive'>sensitive</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
 	<span class='ivar'>@energy</span> <span class='op'>=</span> <span class='int'>400</span>
@@ -639,7 +810,7 @@
 	<span class='ivar'>@keys</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 	<span class='ivar'>@visible</span> <span class='op'>=</span> <span class='id identifier rubyid_visible'>visible</span>
 	<span class='id identifier rubyid_set_img'>set_img</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_hblock'>hblock</span>
-	<span class='id identifier rubyid_set_position'>set_position</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span>
+	<span class='id identifier rubyid_set_location'>set_location</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -656,7 +827,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="block_x-instance_method">
   
-    - (<tt>Object</tt>) <strong>block_x</strong> 
+    - (<tt>Integer</tt>) <strong>block_x</strong> 
   
 
   
@@ -665,13 +836,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute block_x</p>
+<p>Returns Tile block X coordinate.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Tile block X coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -679,12 +868,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_block_x'>block_x</span>
   <span class='ivar'>@block_x</span>
@@ -699,7 +888,7 @@
       <div class="method_details ">
   <h3 class="signature " id="block_y-instance_method">
   
-    - (<tt>Object</tt>) <strong>block_y</strong> 
+    - (<tt>Integer</tt>) <strong>block_y</strong> 
   
 
   
@@ -708,13 +897,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute block_y</p>
+<p>Returns Tile block Y coordinate.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Tile block Y coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -722,12 +929,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_block_y'>block_y</span>
   <span class='ivar'>@block_y</span>
@@ -742,7 +949,7 @@
       <div class="method_details ">
   <h3 class="signature " id="direction-instance_method">
   
-    - (<tt>Object</tt>) <strong>direction</strong> 
+    - (<tt><span class='object_link'><a href="Direction.html" title="Direction (module)">Direction</a></span></tt>) <strong>direction</strong> 
   
 
   
@@ -751,13 +958,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute direction</p>
+<p>Returns Current direction of character.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Direction.html" title="Direction (module)">Direction</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Current direction of character.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -765,12 +990,12 @@
       <pre class="lines">
 
 
-11
-12
-13</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_direction'>direction</span>
   <span class='ivar'>@direction</span>
@@ -785,7 +1010,7 @@
       <div class="method_details ">
   <h3 class="signature " id="img-instance_method">
   
-    - (<tt>Object</tt>) <strong>img</strong>  <span class="extras">(readonly)</span>
+    - (<tt>Gosu::Image</tt>) <strong>img</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -794,13 +1019,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute img</p>
+<p>Returns Currently image there are be drawing.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Gosu::Image</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Currently image there are be drawing.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -808,12 +1051,12 @@
       <pre class="lines">
 
 
-10
-11
-12</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_img'>img</span>
   <span class='ivar'>@img</span>
@@ -828,7 +1071,7 @@
       <div class="method_details ">
   <h3 class="signature " id="sensitive-instance_method">
   
-    - (<tt>Object</tt>) <strong>sensitive</strong> 
+    - (<tt>true/false</tt>) <strong>sensitive</strong> 
   
 
   
@@ -837,13 +1080,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute sensitive</p>
+<p>Returns True if the character will respond to keyboard.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>True if the character will respond to keyboard.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -851,12 +1112,12 @@
       <pre class="lines">
 
 
-11
-12
-13</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sensitive'>sensitive</span>
   <span class='ivar'>@sensitive</span>
@@ -871,7 +1132,7 @@
       <div class="method_details ">
   <h3 class="signature " id="speed-instance_method">
   
-    - (<tt>Object</tt>) <strong>speed</strong> 
+    - (<tt>Integer</tt>) <strong>speed</strong> 
   
 
   
@@ -880,13 +1141,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute speed</p>
+<p>Returns Movement speed.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Movement speed.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -894,12 +1173,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_speed'>speed</span>
   <span class='ivar'>@speed</span>
@@ -914,7 +1193,7 @@
       <div class="method_details ">
   <h3 class="signature " id="state-instance_method">
   
-    - (<tt>Object</tt>) <strong>state</strong> 
+    - (<tt><span class='object_link'><a href="State.html" title="State (module)">State</a></span></tt>) <strong>state</strong> 
   
 
   
@@ -923,13 +1202,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute state</p>
+<p>Returns Current state of character.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="State.html" title="State (module)">State</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Current state of character.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -937,12 +1234,12 @@
       <pre class="lines">
 
 
-11
-12
-13</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_state'>state</span>
   <span class='ivar'>@state</span>
@@ -957,7 +1254,7 @@
       <div class="method_details ">
   <h3 class="signature " id="visible-instance_method">
   
-    - (<tt>Object</tt>) <strong>visible</strong> 
+    - (<tt>true/false</tt>) <strong>visible</strong> 
   
 
   
@@ -966,13 +1263,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute visible</p>
+<p>Returns Visibility of character.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Visibility of character.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -980,12 +1295,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_visible'>visible</span>
   <span class='ivar'>@visible</span>
@@ -1000,7 +1315,7 @@
       <div class="method_details ">
   <h3 class="signature " id="x-instance_method">
   
-    - (<tt>Object</tt>) <strong>x</strong> 
+    - (<tt>Integer</tt>) <strong>x</strong> 
   
 
   
@@ -1009,13 +1324,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute x</p>
+<p>Returns X coordinate.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>X coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1023,12 +1356,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_x'>x</span>
   <span class='ivar'>@x</span>
@@ -1043,7 +1376,7 @@
       <div class="method_details ">
   <h3 class="signature " id="y-instance_method">
   
-    - (<tt>Object</tt>) <strong>y</strong> 
+    - (<tt>Integer</tt>) <strong>y</strong> 
   
 
   
@@ -1052,13 +1385,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute y</p>
+<p>Returns Y coordinate.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Y coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1066,12 +1417,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_y'>y</span>
   <span class='ivar'>@y</span>
@@ -1091,24 +1442,57 @@
       <div class="method_details first">
   <h3 class="signature first" id="draw-instance_method">
   
-    - (<tt>Object</tt>) <strong>draw</strong>(z = 0) 
+    - (<tt>void</tt>) <strong>draw</strong>(z = 0) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Draw the character&#39;s sprite.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>z</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Z order.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-126
-127
-128</pre>
+168
+169
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span>
 	<span class='ivar'>@frame</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='ivar'>@x</span> <span class='op'>-</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_camera'>camera</span><span class='period'>.</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>-</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_camera'>camera</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>-</span> <span class='ivar'>@quad_h</span><span class='comma'>,</span> <span class='id identifier rubyid_z'>z</span> <span class='kw'>if</span> <span class='id identifier rubyid_visible?'>visible?</span>
@@ -1121,7 +1505,7 @@
       <div class="method_details ">
   <h3 class="signature " id="quaded?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>quaded?</strong> 
+    - (<tt>true/false</tt>) <strong>quaded?</strong> 
   
 
   
@@ -1130,6 +1514,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Check if characters graphic are in a location relative to the size of
+tiles.</p>
+
 
   </div>
 </div>
@@ -1141,7 +1528,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>true/false</tt>)</span>
       
       
       
@@ -1155,14 +1542,14 @@
       <pre class="lines">
 
 
-55
-56
-57
-58
-59</pre>
+91
+92
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_quaded?'>quaded?</span>
 	<span class='id identifier rubyid_py'>py</span> <span class='op'>=</span> <span class='ivar'>@y</span> <span class='op'>-</span> <span class='ivar'>@quad_w</span> <span class='op'>-</span> <span class='const'>BLOCK_SIZE</span>
@@ -1177,35 +1564,46 @@
       <div class="method_details ">
   <h3 class="signature " id="read_keys-instance_method">
   
-    - (<tt>Object</tt>) <strong>read_keys</strong> 
+    - (<tt>void</tt>) <strong>read_keys</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Read the main input keys.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74</pre>
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_read_keys'>read_keys</span>
 	<span class='ivar'>@keys</span><span class='lbracket'>[</span><span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KbLeft</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KbLeft</span>
@@ -1229,38 +1627,85 @@
       <div class="method_details ">
   <h3 class="signature " id="set_img-instance_method">
   
-    - (<tt>Object</tt>) <strong>set_img</strong>(filename, hblock) 
+    - (<tt>void</tt>) <strong>set_img</strong>(filename, hblock) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Set a new sprite for the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Path to character&#39;s sprite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hblock</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Horizontal block count of sprite.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48</pre>
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_img'>set_img</span><span class='lparen'>(</span><span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_hblock'>hblock</span><span class='rparen'>)</span>
 	<span class='ivar'>@img</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Image</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@handle</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='kw'>false</span>
@@ -1285,29 +1730,76 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="set_position-instance_method">
+  <h3 class="signature " id="set_location-instance_method">
   
-    - (<tt>Object</tt>) <strong>set_position</strong>(x, y) 
-  
-
+    - (<tt>void</tt>) <strong>set_location</strong>(x, y) 
   
 
   
-</h3><table class="source_code">
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Set location of character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>x</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>X coordinate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>y</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Y coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-50
-51
-52
-53</pre>
+84
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 84</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_set_position'>set_position</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_set_location'>set_location</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='rparen'>)</span>
 	<span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
 	<span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_y'>y</span>
 <span class='kw'>end</span></pre>
@@ -1319,58 +1811,30 @@
       <div class="method_details ">
   <h3 class="signature " id="update-instance_method">
   
-    - (<tt>Object</tt>) <strong>update</strong> 
+    - (<tt>void</tt>) <strong>update</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Check all conditions and do actions based on keyboard states, directions
+and states.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
 116
 117
 118
@@ -1379,13 +1843,51 @@
 121
 122
 123
-124</pre>
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
-	
 	<span class='id identifier rubyid_read_keys'>read_keys</span>
 	<span class='kw'>if</span> <span class='ivar'>@sensitive</span>
 	<span class='kw'>case</span> <span class='ivar'>@state</span>
@@ -1441,7 +1943,7 @@
       <div class="method_details ">
   <h3 class="signature " id="visible?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>visible?</strong> 
+    - (<tt>true/false</tt>) <strong>visible?</strong> 
   
 
   
@@ -1450,6 +1952,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>True if character is visible.</p>
+
 
   </div>
 </div>
@@ -1461,7 +1965,7 @@
     <li>
       
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>true/false</tt>)</span>
       
       
       
@@ -1475,12 +1979,12 @@
       <pre class="lines">
 
 
-130
-131
-132</pre>
+174
+175
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'character.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'character.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_visible?'>visible?</span>
 	<span class='kw'>return</span> <span class='ivar'>@visible</span>
@@ -1495,7 +1999,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Feb  5 15:47:21 2015 by
+  Generated on Fri Feb  6 14:36:26 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

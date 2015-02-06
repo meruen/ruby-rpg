@@ -1,0 +1,1143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Frame
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!Frame.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (F)</a> &raquo;
+    
+    
+    <span class="title">Frame</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Frame
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Frame</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">frame.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Amazing class that build frames without resources.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#a-instance_method" title="#a (instance method)">- (Integer) <strong>a</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Alpha value.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#h-instance_method" title="#h (instance method)">- (Integer) <strong>h</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Height.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle-instance_method" title="#handle (instance method)">- (Gamebox) <strong>handle</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Main Gamebox.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#w-instance_method" title="#w (instance method)">- (Integer) <strong>w</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Width.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#x-instance_method" title="#x (instance method)">- (Integer) <strong>x</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>X coordinate.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y-instance_method" title="#y (instance method)">- (Integer) <strong>y</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Y coordinate.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#z-instance_method" title="#z (instance method)">- (Integer) <strong>z</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Z order.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#colors-instance_method" title="#colors (instance method)">- (void) <strong>colors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Build the colorset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#draw-instance_method" title="#draw (instance method)">- (void) <strong>draw</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Draw the Frame content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Frame) <strong>initialize</strong>(handle, x, y, w, h, a = 255, z = 0) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Frame.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Frame (class)">Frame</a></span></tt>) <strong>initialize</strong>(handle, x, y, w, h, a = 255, z = 0) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Frame</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>handle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Gamebox.html" title="Gamebox (class)">Gamebox</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Main Gamebox.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>x</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>X coordinate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>y</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Y coordinate.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>w</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Width.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>h</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Height.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>a</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>255</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Alpha value.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>z</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Z order.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_w'>w</span><span class='comma'>,</span> <span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='int'>255</span><span class='comma'>,</span> <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span>
+	<span class='ivar'>@handle</span> <span class='op'>=</span> <span class='id identifier rubyid_handle'>handle</span>	
+	<span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+	<span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_y'>y</span>
+	<span class='ivar'>@w</span> <span class='op'>=</span> <span class='id identifier rubyid_w'>w</span>
+	<span class='ivar'>@h</span> <span class='op'>=</span> <span class='id identifier rubyid_h'>h</span>
+	<span class='ivar'>@a</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span>
+	<span class='ivar'>@z</span> <span class='op'>=</span> <span class='id identifier rubyid_z'>z</span>
+	<span class='id identifier rubyid_colors'>colors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="a=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="a-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>a</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Alpha value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Alpha value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_a'>a</span>
+  <span class='ivar'>@a</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="h=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="h-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>h</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Height.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Height.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_h'>h</span>
+  <span class='ivar'>@h</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="handle=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="handle-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Gamebox.html" title="Gamebox (class)">Gamebox</a></span></tt>) <strong>handle</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Main Gamebox.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Gamebox.html" title="Gamebox (class)">Gamebox</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Main Gamebox.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle'>handle</span>
+  <span class='ivar'>@handle</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="w=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="w-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>w</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Width.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Width.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_w'>w</span>
+  <span class='ivar'>@w</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="x=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="x-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>x</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns X coordinate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>X coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_x'>x</span>
+  <span class='ivar'>@x</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="y=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>y</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Y coordinate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Y coordinate.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_y'>y</span>
+  <span class='ivar'>@y</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="z=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="z-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>z</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Z order.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Z order.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='ivar'>@z</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="colors-instance_method">
+  
+    - (<tt>void</tt>) <strong>colors</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Build the colorset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_colors'>colors</span>
+	<span class='ivar'>@white</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>255</span><span class='comma'>,</span> <span class='int'>255</span><span class='comma'>,</span> <span class='int'>255</span>
+	<span class='ivar'>@blue_border</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>33</span><span class='comma'>,</span> <span class='int'>35</span><span class='comma'>,</span> <span class='int'>79</span>
+	<span class='ivar'>@blue1</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>66</span><span class='comma'>,</span> <span class='int'>68</span><span class='comma'>,</span> <span class='int'>120</span>
+	<span class='ivar'>@blue2</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>56</span><span class='comma'>,</span> <span class='int'>58</span><span class='comma'>,</span> <span class='int'>110</span>
+	<span class='ivar'>@blue3</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span><span class='int'>40</span><span class='comma'>,</span> <span class='int'>41</span><span class='comma'>,</span> <span class='int'>81</span>
+	<span class='ivar'>@blue_text</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>192</span><span class='comma'>,</span> <span class='int'>224</span><span class='comma'>,</span> <span class='int'>255</span>
+
+	<span class='ivar'>@green_light</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>255</span><span class='comma'>,</span> <span class='int'>0</span>
+	<span class='ivar'>@green_dark</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>100</span><span class='comma'>,</span> <span class='int'>0</span>
+	<span class='ivar'>@blue_light</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>255</span>
+	<span class='ivar'>@blue_dark</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>100</span>
+	<span class='ivar'>@black</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
+	<span class='ivar'>@grey</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@a</span><span class='comma'>,</span> <span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="draw-instance_method">
+  
+    - (<tt>void</tt>) <strong>draw</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Draw the Frame content.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'frame.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
+	<span class='comment'># blue border
+</span>	<span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_draw_quad'>draw_quad</span><span class='lparen'>(</span><span class='ivar'>@x</span><span class='comma'>,</span> <span class='ivar'>@y</span><span class='comma'>,</span> <span class='ivar'>@blue_border</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='ivar'>@w</span><span class='comma'>,</span> <span class='ivar'>@y</span><span class='comma'>,</span> <span class='ivar'>@blue_border</span><span class='comma'>,</span> <span class='ivar'>@x</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='ivar'>@h</span><span class='comma'>,</span> <span class='ivar'>@blue_border</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='ivar'>@w</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='ivar'>@h</span><span class='comma'>,</span> <span class='ivar'>@blue_border</span><span class='comma'>,</span> <span class='ivar'>@z</span><span class='rparen'>)</span>     
+	<span class='comment'># white border
+</span>	<span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_draw_quad'>draw_quad</span><span class='lparen'>(</span><span class='ivar'>@x</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@white</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='ivar'>@w</span> <span class='op'>-</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@white</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='ivar'>@h</span> <span class='op'>-</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@white</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='ivar'>@w</span> <span class='op'>-</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='ivar'>@h</span> <span class='op'>-</span> <span class='int'>1</span><span class='comma'>,</span> <span class='ivar'>@white</span><span class='comma'>,</span> <span class='ivar'>@z</span><span class='rparen'>)</span>    
+	<span class='comment'># blue gradient
+</span>	<span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_draw_quad'>draw_quad</span><span class='lparen'>(</span><span class='ivar'>@x</span> <span class='op'>+</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@blue1</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='ivar'>@w</span> <span class='op'>-</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@blue2</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='ivar'>@h</span> <span class='op'>-</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@blue2</span><span class='comma'>,</span> <span class='ivar'>@x</span> <span class='op'>+</span> <span class='ivar'>@w</span> <span class='op'>-</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@y</span> <span class='op'>+</span> <span class='ivar'>@h</span> <span class='op'>-</span> <span class='int'>3</span><span class='comma'>,</span> <span class='ivar'>@blue3</span><span class='comma'>,</span> <span class='ivar'>@z</span><span class='rparen'>)</span> 
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Fri Feb  6 14:36:26 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

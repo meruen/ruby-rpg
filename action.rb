@@ -8,17 +8,17 @@ class Action
 	attr_accessor :finished
 	# @return [Gamebox] main Gamebox class.
 	attr_accessor :handle
-	# @return [Func] function that will be executed before the initialization of action.
+	# @return [Proc] function that will be executed before the initialization of action.
 	attr_accessor :ini_func
-	# @return [Func] function that will be executed before the update of action.
+	# @return [Proc] function that will be executed before the update of action.
 	attr_accessor :upd_func
-	# @return [Func] function that will be executed before the draw of action.
+	# @return [Proc] function that will be executed before the draw of action.
 	attr_accessor :drw_func
 
 	# @param [Gamebox] handle Main Gamebox class.
-	# @param [Func] ini_func function that will be executed before the initialization of action.
-	# @param [Func] upd_func function that will be executed before the update method of action.
-	# @param [Func] drw_func function that will be executed before the draw method of action.
+	# @param [Proc] ini_func function that will be executed before the initialization of action.
+	# @param [Proc] upd_func function that will be executed before the update method of action.
+	# @param [Proc] drw_func function that will be executed before the draw method of action.
 	def initialize(handle, ini_func = nil, upd_func = nil, drw_func = nil)
 		@handle = handle
 		@finished = false

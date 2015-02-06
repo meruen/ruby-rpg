@@ -101,7 +101,19 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>General class to build humanoid events. Events can have to ways to be
+activated. Pressing a key or touching.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -111,7 +123,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#action_manager-instance_method" title="#action_manager (instance method)">- (Object) <strong>action_manager</strong> </a>
+      <a href="#action_manager-instance_method" title="#action_manager (instance method)">- (ActionManager) <strong>action_manager</strong> </a>
     
 
     
@@ -129,7 +141,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute action_manager.</p>
+<p>ActionManager with a list of actions to execute when the event be
+activated.</p>
 </div></span>
   
 </li>
@@ -138,7 +151,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#activated-instance_method" title="#activated (instance method)">- (Object) <strong>activated</strong> </a>
+      <a href="#activated-instance_method" title="#activated (instance method)">- (true/false) <strong>activated</strong> </a>
     
 
     
@@ -158,7 +171,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute activated.</p>
+<p>True if the event is actually activated.</p>
 </div></span>
   
 </li>
@@ -167,7 +180,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#z-instance_method" title="#z (instance method)">- (Object) <strong>z</strong> </a>
+      <a href="#z-instance_method" title="#z (instance method)">- (Integer) <strong>z</strong> </a>
     
 
     
@@ -185,7 +198,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute z.</p>
+<p>Z order.</p>
 </div></span>
   
 </li>
@@ -203,7 +216,7 @@
 
   
     <h2>
-      Instance Method Summary
+      Callbacks
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
@@ -212,7 +225,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">- (Object) <strong>draw</strong> </a>
+      <a href="#on_press-instance_method" title="#on_press (instance method)">- (void) <strong>on_press</strong>(direction, look = true) </a>
     
 
     
@@ -226,7 +239,66 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Callback to execute when Character is colliding and press the action key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_touch-instance_method" title="#on_touch (instance method)">- (void) <strong>on_touch</strong>(direction) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Callback to execute when Character collide with an Event.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#draw-instance_method" title="#draw (instance method)">- (void) <strong>draw</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Draw the current action if is activated and the graphics of Event.</p>
+</div></span>
   
 </li>
 
@@ -260,7 +332,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_press-instance_method" title="#on_press (instance method)">- (Object) <strong>on_press</strong>(direction, look = true) </a>
+      <a href="#set_action-instance_method" title="#set_action (instance method)">- (void) <strong>set_action</strong>(action_manager) </a>
     
 
     
@@ -274,7 +346,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Set the ActionManager.</p>
+</div></span>
   
 </li>
 
@@ -282,7 +356,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_touch-instance_method" title="#on_touch (instance method)">- (Object) <strong>on_touch</strong>(direction) </a>
+      <a href="#update-instance_method" title="#update (instance method)">- (void) <strong>update</strong> </a>
     
 
     
@@ -296,51 +370,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#set_action-instance_method" title="#set_action (instance method)">- (Object) <strong>set_action</strong>(action_manager) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#update-instance_method" title="#update (instance method)">- (Object) <strong>update</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Update the current action and check if Event is still activated.</p>
+</div></span>
   
 </li>
 
@@ -358,7 +390,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Character.html" title="Character (class)">Character</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Character.html#quaded%3F-instance_method" title="Character#quaded? (method)">#quaded?</a></span>, <span class='object_link'><a href="Character.html#read_keys-instance_method" title="Character#read_keys (method)">#read_keys</a></span>, <span class='object_link'><a href="Character.html#set_img-instance_method" title="Character#set_img (method)">#set_img</a></span>, <span class='object_link'><a href="Character.html#set_position-instance_method" title="Character#set_position (method)">#set_position</a></span>, <span class='object_link'><a href="Character.html#visible%3F-instance_method" title="Character#visible? (method)">#visible?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Character.html#quaded%3F-instance_method" title="Character#quaded? (method)">#quaded?</a></span>, <span class='object_link'><a href="Character.html#read_keys-instance_method" title="Character#read_keys (method)">#read_keys</a></span>, <span class='object_link'><a href="Character.html#set_img-instance_method" title="Character#set_img (method)">#set_img</a></span>, <span class='object_link'><a href="Character.html#set_location-instance_method" title="Character#set_location (method)">#set_location</a></span>, <span class='object_link'><a href="Character.html#visible%3F-instance_method" title="Character#visible? (method)">#visible?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -380,7 +412,133 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>handle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Gamebox.html" title="Gamebox (class)">Gamebox</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Main Gamebox.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Path to humanoid sprite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hblock</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>4</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Horizontal block of count of sprite.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>x</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>X coordinate of Event.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>y</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Y coordinate of Event.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>speed</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>2</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Movement speed.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>visible</span>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Visibility of Event.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -388,15 +546,15 @@
       <pre class="lines">
 
 
-12
-13
-14
-15
-16
-17</pre>
+24
+25
+26
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_hblock'>hblock</span> <span class='op'>=</span> <span class='int'>4</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_speed'>speed</span> <span class='op'>=</span> <span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
 	<span class='kw'>super</span> <span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_hblock'>hblock</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_speed'>speed</span><span class='comma'>,</span> <span class='id identifier rubyid_visible'>visible</span><span class='comma'>,</span> <span class='kw'>false</span>	
@@ -419,7 +577,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="action_manager-instance_method">
   
-    - (<tt>Object</tt>) <strong>action_manager</strong> 
+    - (<tt><span class='object_link'><a href="ActionManager.html" title="ActionManager (class)">ActionManager</a></span></tt>) <strong>action_manager</strong> 
   
 
   
@@ -428,13 +586,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute action_manager</p>
+<p>Returns ActionManager with a list of actions to execute when the event be
+activated.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ActionManager.html" title="ActionManager (class)">ActionManager</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ActionManager with a list of actions to execute when the event be
+activated.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -442,12 +620,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_action_manager'>action_manager</span>
   <span class='ivar'>@action_manager</span>
@@ -462,7 +640,7 @@
       <div class="method_details ">
   <h3 class="signature " id="activated-instance_method">
   
-    - (<tt>Object</tt>) <strong>activated</strong>  <span class="extras">(readonly)</span>
+    - (<tt>true/false</tt>) <strong>activated</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -471,13 +649,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute activated</p>
+<p>Returns True if the event is actually activated.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>True if the event is actually activated.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -485,12 +681,12 @@
       <pre class="lines">
 
 
-10
-11
-12</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_activated'>activated</span>
   <span class='ivar'>@activated</span>
@@ -505,7 +701,7 @@
       <div class="method_details ">
   <h3 class="signature " id="z-instance_method">
   
-    - (<tt>Object</tt>) <strong>z</strong> 
+    - (<tt>Integer</tt>) <strong>z</strong> 
   
 
   
@@ -514,13 +710,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute z</p>
+<p>Returns Z order.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Z order.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -528,12 +742,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_z'>z</span>
   <span class='ivar'>@z</span>
@@ -553,27 +767,38 @@
       <div class="method_details first">
   <h3 class="signature first" id="draw-instance_method">
   
-    - (<tt>Object</tt>) <strong>draw</strong> 
+    - (<tt>void</tt>) <strong>draw</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Draw the current action if is activated and the graphics of Event.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58</pre>
+81
+82
+83
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
 	<span class='kw'>super</span> <span class='ivar'>@z</span>
@@ -589,39 +814,88 @@
       <div class="method_details ">
   <h3 class="signature " id="on_press-instance_method">
   
-    - (<tt>Object</tt>) <strong>on_press</strong>(direction, look = true) 
+    - (<tt>void</tt>) <strong>on_press</strong>(direction, look = true) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Callback to execute when Character is colliding and press the action key.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>direction</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Direction.html" title="Direction (module)">Direction</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Direction that Character have when act.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>look</span>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>True if the Event must look to Character when act.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40</pre>
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_press'>on_press</span><span class='lparen'>(</span><span class='id identifier rubyid_direction'>direction</span><span class='comma'>,</span> <span class='id identifier rubyid_look'>look</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@activated</span>
@@ -649,24 +923,55 @@
       <div class="method_details ">
   <h3 class="signature " id="on_touch-instance_method">
   
-    - (<tt>Object</tt>) <strong>on_touch</strong>(direction) 
+    - (<tt>void</tt>) <strong>on_touch</strong>(direction) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Callback to execute when Character collide with an Event.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>direction</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Direction.html" title="Direction (module)">Direction</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Direction that Character have when touch.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-19
-20
-21</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_touch'>on_touch</span><span class='lparen'>(</span><span class='id identifier rubyid_direction'>direction</span><span class='rparen'>)</span>
 					
@@ -679,25 +984,57 @@
       <div class="method_details ">
   <h3 class="signature " id="set_action-instance_method">
   
-    - (<tt>Object</tt>) <strong>set_action</strong>(action_manager) 
+    - (<tt>void</tt>) <strong>set_action</strong>(action_manager) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Set the ActionManager. Use to change the actions that will be executed when
+Event is activated.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>action_manager</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ActionManager.html" title="ActionManager (class)">ActionManager</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ActionManager.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-42
-43
-44
-45</pre>
+66
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_action'>set_action</span><span class='lparen'>(</span><span class='id identifier rubyid_action_manager'>action_manager</span><span class='rparen'>)</span>
 	<span class='ivar'>@action_manager</span> <span class='op'>=</span> <span class='id identifier rubyid_action_manager'>action_manager</span>
@@ -711,26 +1048,37 @@
       <div class="method_details ">
   <h3 class="signature " id="update-instance_method">
   
-    - (<tt>Object</tt>) <strong>update</strong> 
+    - (<tt>void</tt>) <strong>update</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Update the current action and check if Event is still activated.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-47
-48
-49
-50
-51</pre>
+73
+74
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
 	<span class='kw'>super</span>
@@ -747,7 +1095,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Feb  5 15:47:21 2015 by
+  Generated on Fri Feb  6 14:36:26 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

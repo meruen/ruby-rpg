@@ -4,26 +4,26 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: Condition
+  Class: Act::Condition
   
     &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
-  relpath = '';
-  framesUrl = "frames.html#!Condition.html";
+  relpath = '../';
+  framesUrl = "../frames.html#!Act/Condition.html";
 </script>
 
 
-  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
-  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
 
 
   </head>
@@ -31,9 +31,9 @@
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (C)</a> &raquo;
-    
-    
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Act.html" title="Act (module)">Act</a></span></span>
+     &raquo; 
     <span class="title">Condition</span>
   
 
@@ -43,17 +43,17 @@
       <div id="search">
   
     <a class="full_list_link" id="class_list_link"
-        href="class_list.html">
+        href="../class_list.html">
       Class List
     </a>
   
     <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
+        href="../method_list.html">
       Method List
     </a>
   
     <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
+        href="../file_list.html">
       File List
     </a>
   
@@ -63,7 +63,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Class: Condition
+    <div id="content"><h1>Class: Act::Condition
   
   
   
@@ -73,14 +73,14 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><span class='object_link'><a href="Action.html" title="Action (class)">Action</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="../Action.html" title="Action (class)">Action</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next"><span class='object_link'><a href="Action.html" title="Action (class)">Action</a></span></li>
+            <li class="next"><span class='object_link'><a href="../Action.html" title="Action (class)">Action</a></span></li>
           
-            <li class="next">Condition</li>
+            <li class="next">Act::Condition</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -101,7 +101,19 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class serves to use conditions inside an action. By this way, you can
+check something before start to execute another ActionManager.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -111,7 +123,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#action_manager-instance_method" title="#action_manager (instance method)">- (Object) <strong>action_manager</strong> </a>
+      <a href="#action_manager-instance_method" title="#action_manager (instance method)">- (ActionManager) <strong>action_manager</strong> </a>
     
 
     
@@ -129,7 +141,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute action_manager.</p>
+<p>Action manager containing the actions that will be executed when the
+condition is satisfied.</p>
 </div></span>
   
 </li>
@@ -138,7 +151,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#evalued-instance_method" title="#evalued (instance method)">- (Object) <strong>evalued</strong> </a>
+      <a href="#evalued-instance_method" title="#evalued (instance method)">- (true/false) <strong>evalued</strong> </a>
     
 
     
@@ -156,7 +169,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute evalued.</p>
+<p>True if result of evaluation is true.</p>
 </div></span>
   
 </li>
@@ -165,7 +178,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#str-instance_method" title="#str (instance method)">- (Object) <strong>str</strong> </a>
+      <a href="#str-instance_method" title="#str (instance method)">- (String) <strong>str</strong> </a>
     
 
     
@@ -183,7 +196,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute str.</p>
+<p>Evaluation string.</p>
 </div></span>
   
 </li>
@@ -195,8 +208,8 @@
 
   
   
-  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Action.html" title="Action (class)">Action</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Action.html#drw_func-instance_method" title="Action#drw_func (method)">#drw_func</a></span>, <span class='object_link'><a href="Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>, <span class='object_link'><a href="Action.html#handle-instance_method" title="Action#handle (method)">#handle</a></span>, <span class='object_link'><a href="Action.html#ini_func-instance_method" title="Action#ini_func (method)">#ini_func</a></span>, <span class='object_link'><a href="Action.html#upd_func-instance_method" title="Action#upd_func (method)">#upd_func</a></span></p>
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Action.html" title="Action (class)">Action</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Action.html#drw_func-instance_method" title="Action#drw_func (method)">#drw_func</a></span>, <span class='object_link'><a href="../Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>, <span class='object_link'><a href="../Action.html#handle-instance_method" title="Action#handle (method)">#handle</a></span>, <span class='object_link'><a href="../Action.html#ini_func-instance_method" title="Action#ini_func (method)">#ini_func</a></span>, <span class='object_link'><a href="../Action.html#upd_func-instance_method" title="Action#upd_func (method)">#upd_func</a></span></p>
 
 
   
@@ -210,7 +223,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">- (Object) <strong>draw</strong>(camera) </a>
+      <a href="#draw-instance_method" title="#draw (instance method)">- (void) <strong>draw</strong>(camera) </a>
     
 
     
@@ -224,7 +237,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Draw any content that the current action of action manager contains.</p>
+</div></span>
   
 </li>
 
@@ -232,7 +247,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#finish-instance_method" title="#finish (instance method)">- (Object) <strong>finish</strong> </a>
+      <a href="#finish-instance_method" title="#finish (instance method)">- (void) <strong>finish</strong> </a>
     
 
     
@@ -246,7 +261,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Finish the internal ActionManager.</p>
+</div></span>
   
 </li>
 
@@ -280,7 +297,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepare-instance_method" title="#prepare (instance method)">- (Object) <strong>prepare</strong> </a>
+      <a href="#prepare-instance_method" title="#prepare (instance method)">- (void) <strong>prepare</strong> </a>
     
 
     
@@ -294,7 +311,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepare the condition for check and execution.</p>
+</div></span>
   
 </li>
 
@@ -302,7 +321,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">- (Object) <strong>update</strong> </a>
+      <a href="#update-instance_method" title="#update (instance method)">- (void) <strong>update</strong> </a>
     
 
     
@@ -316,7 +335,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Update the actual action if the condition is satisfied and is executing.</p>
+</div></span>
   
 </li>
 
@@ -336,7 +357,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Condition (class)">Condition</a></span></tt>) <strong>initialize</strong>(handle, str, actions) 
+    - (<tt><span class='object_link'><a href="" title="Act::Condition (class)">Condition</a></span></tt>) <strong>initialize</strong>(handle, str, actions) 
   
 
   
@@ -351,7 +372,59 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>handle</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Gamebox.html" title="Gamebox (class)">Gamebox</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Main Gamebox.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Evaluation string.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>actions</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array of actions that will be putted on ActionManager.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -359,18 +432,18 @@
       <pre class="lines">
 
 
-8
-9
-10
-11
-12
-13
-14
-15
-16</pre>
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
 	<span class='kw'>super</span> <span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='kw'>nil</span>	
@@ -396,7 +469,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="action_manager-instance_method">
   
-    - (<tt>Object</tt>) <strong>action_manager</strong> 
+    - (<tt><span class='object_link'><a href="../ActionManager.html" title="ActionManager (class)">ActionManager</a></span></tt>) <strong>action_manager</strong> 
   
 
   
@@ -405,13 +478,33 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute action_manager</p>
+<p>Returns Action manager containing the actions that will be executed when
+the condition is satisfied.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../ActionManager.html" title="ActionManager (class)">ActionManager</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Action manager containing the actions that will be executed when the
+condition is satisfied.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -419,12 +512,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_action_manager'>action_manager</span>
   <span class='ivar'>@action_manager</span>
@@ -439,7 +532,7 @@
       <div class="method_details ">
   <h3 class="signature " id="evalued-instance_method">
   
-    - (<tt>Object</tt>) <strong>evalued</strong> 
+    - (<tt>true/false</tt>) <strong>evalued</strong> 
   
 
   
@@ -448,13 +541,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute evalued</p>
+<p>Returns True if result of evaluation is true.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>True if result of evaluation is true.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -462,12 +573,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_evalued'>evalued</span>
   <span class='ivar'>@evalued</span>
@@ -482,7 +593,7 @@
       <div class="method_details ">
   <h3 class="signature " id="str-instance_method">
   
-    - (<tt>Object</tt>) <strong>str</strong> 
+    - (<tt>String</tt>) <strong>str</strong> 
   
 
   
@@ -491,13 +602,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute str</p>
+<p>Returns Evaluation string.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Evaluation string.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -505,12 +634,12 @@
       <pre class="lines">
 
 
-6
-7
-8</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_str'>str</span>
   <span class='ivar'>@str</span>
@@ -530,24 +659,55 @@
       <div class="method_details first">
   <h3 class="signature first" id="draw-instance_method">
   
-    - (<tt>Object</tt>) <strong>draw</strong>(camera) 
+    - (<tt>void</tt>) <strong>draw</strong>(camera) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Draw any content that the current action of action manager contains.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>camera</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Camera.html" title="Camera (class)">Camera</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Main Camera of your project.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-36
-37
-38</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@evalued</span>
@@ -560,26 +720,37 @@
       <div class="method_details ">
   <h3 class="signature " id="finish-instance_method">
   
-    - (<tt>Object</tt>) <strong>finish</strong> 
+    - (<tt>void</tt>) <strong>finish</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Finish the internal ActionManager.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-30
-31
-32
-33
-34</pre>
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span>
 	<span class='kw'>super</span>
@@ -594,26 +765,37 @@
       <div class="method_details ">
   <h3 class="signature " id="prepare-instance_method">
   
-    - (<tt>Object</tt>) <strong>prepare</strong> 
+    - (<tt>void</tt>) <strong>prepare</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Prepare the condition for check and execution.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-18
-19
-20
-21
-22</pre>
+30
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
 	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -628,26 +810,37 @@
       <div class="method_details ">
   <h3 class="signature " id="update-instance_method">
   
-    - (<tt>Object</tt>) <strong>update</strong> 
+    - (<tt>void</tt>) <strong>update</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Update the actual action if the condition is satisfied and is executing.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24
-25
-26
-27
-28</pre>
+38
+39
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
 	<span class='ivar'>@evalued</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='ivar'>@str</span><span class='rparen'>)</span>
@@ -664,7 +857,7 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Feb  6 11:13:44 2015 by
+  Generated on Fri Feb  6 14:36:26 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

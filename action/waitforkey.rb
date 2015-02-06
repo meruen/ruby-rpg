@@ -2,18 +2,27 @@
 
 load 'action.rb'
 
-class WaitForKey < Action
-	attr_accessor :key
-	attr_accessor :handle
+module Act
+	# Single action to wait for a key and proceed.
+	class WaitForKey < Action
+		# @return [Integer] Gosu key.
+		attr_accessor :key
+		# @return [Gamebox] Main Gamebox.
+		attr_accessor :handle
 
-	def initialize(handle ,key)
-		super nil
-		@handle = handle
-		@key = key
-	end
+		# param [Gamebox] handle Main Gamebox.
+		# param [Integer] key Gosu key.
+		def initialize(handle ,key)
+			super nil
+			@handle = handle
+			@key = key
+		end
 
-	def update
-		super
-		finish if @handle.button_down? @key
+		# Check if is pressing, then finish.
+		# @return [void]
+		def update
+			super
+			finish if @handle.button_down? @key
+		end
 	end
 end

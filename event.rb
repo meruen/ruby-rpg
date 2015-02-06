@@ -5,10 +5,22 @@ load 'character.rb'
 load 'action/message.rb'
 load 'action_manager.rb'
 
+# General class to build humanoid events. Events can have to ways to be activated. Pressing a key or touching.
 class Event < Character
-	attr_accessor :z, :action_manager
+	# @return [Integer] Z order.
+	attr_accessor :z
+	# @return [ActionManager] ActionManager with a list of actions to execute when the event be activated.
+	attr_accessor :action_manager
+	# @return [true/false] True if the event is actually activated.
 	attr_reader :activated
 
+	# @param [Gamebox] handle Main Gamebox.
+	# @param [String] filename Path to humanoid sprite.
+	# @param [Integer] hblock Horizontal block of count of sprite.
+	# @param [Integer] x X coordinate of Event.
+	# @param [Integer] y Y coordinate of Event.
+	# @param [Integer] speed Movement speed.
+	# @param [true/false] visible Visibility of Event.	
 	def initialize(handle, filename, hblock = 4, x = 0, y = 0, speed = 2, visible = true)
 		super handle, filename, hblock, x, y, speed, visible, false	
 		@z = 0
@@ -16,10 +28,18 @@ class Event < Character
 		@activated = false
 	end
 
+	# @!group Callbacks
+	# Callback to execute when Character collide with an Event.
+	# @param [Direction] direction Direction that Character have when touch.
+	# @return [void]
 	def on_touch(direction)
 						
 	end
 
+	# Callback to execute when Character is colliding and press the action key.
+	# @param [Direction] direction Direction that Character have when act.
+	# @param [true/false] look True if the Event must look to Character when act.
+	# @return [void]
 	def on_press(direction, look = true)
 		if !@activated
 			@activated = true
@@ -38,18 +58,26 @@ class Event < Character
 				puts "[ERROR] Unknown direction #{direction}"
 		end if look
 	end
+	# @!endgroup
 
+	# Set the ActionManager. Use to change the actions that will be executed when Event is activated.
+	# @param [ActionManager] action_manager ActionManager.
+	# @return [void]
 	def set_action(action_manager)
 		@action_manager = action_manager
 		@action_manager.current_action_index = 0
 	end
 
+	# Update the current action and check if Event is still activated.
+	# @return [void]
 	def update
 		super
 		@activated = false if @action_manager.current_action == nil
 		@action_manager.update if @activated		
 	end
 
+	# Draw the current action if is activated and the graphics of Event.
+	# @return [void]
 	def draw
 		super @z
 		#@actions[@actual_action].draw(@handle.map.camera) if @actions[@actual_action] != nil && @activated

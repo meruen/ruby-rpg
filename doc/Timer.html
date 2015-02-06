@@ -288,15 +288,13 @@ libgosu. Basically you set the interval that you want and with the
 11
 12
 13
-14
-15</pre>
+14</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'timer.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_interval'>interval</span><span class='rparen'>)</span>
 	<span class='ivar'>@interval</span> <span class='op'>=</span> <span class='id identifier rubyid_interval'>interval</span>
-	<span class='ivar'>@is_loop</span> <span class='op'>=</span> <span class='id identifier rubyid_is_loop'>is_loop</span>
 	<span class='id identifier rubyid_start'>start</span>	
 <span class='kw'>end</span></pre>
     </td>
@@ -417,16 +415,16 @@ interval.</p>
       <pre class="lines">
 
 
+24
 25
 26
 27
 28
 29
-30
-31</pre>
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'timer.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'timer.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reached?'>reached?</span>
 	<span class='kw'>if</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='id identifier rubyid_milliseconds'>milliseconds</span> <span class='op'>-</span> <span class='ivar'>@milliseconds_before</span> <span class='op'>&gt;=</span> <span class='ivar'>@interval</span>
@@ -466,12 +464,12 @@ interval.</p>
       <pre class="lines">
 
 
+18
 19
-20
-21</pre>
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'timer.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'timer.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
 	<span class='ivar'>@milliseconds_before</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='id identifier rubyid_milliseconds'>milliseconds</span>
@@ -486,7 +484,7 @@ interval.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Feb  5 15:47:21 2015 by
+  Generated on Fri Feb  6 14:36:26 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>
