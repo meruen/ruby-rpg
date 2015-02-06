@@ -36,4 +36,4 @@ Clone the repository, and run some example from the main directory. Example:
 > ``ruby example/example01.rb``
 
 # Considerations
-I'm actually building a tutorial using a lot of actions to make it easier to understand the framework. Need help with YARD... If someone can help me, mail me: emanuelbotelho@ymail.com
+I'm actually building a tutorial using a lot of actions to make it easier to understand the framework. I need help with YARD... If someone can help me, mail me: emanuelbotelho@ymail.com
