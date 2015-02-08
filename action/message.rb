@@ -4,6 +4,7 @@ require 'gosu'
 load 'action.rb'
 load 'timer.rb'
 load 'frame.rb'
+load 'mod/controls.rb'
 
 module Act
 	# This class serves to show messages in order.
@@ -59,7 +60,7 @@ module Act
 			if self.finished
 				rebuild
 			else
-				@text_to_show = '' and finish and return if @text_to_show == @txt && @handle.button_down?(Gosu::KbX)
+				@text_to_show = '' and finish and return if @text_to_show == @txt && (@handle.button_down?(Controls::Kb::ACT) || @handle.button_down?(Controls::Jp::ACT))
 				return if @text_to_show == @txt
 				@text_to_show << @txt[@text_to_show.length] if @timer.reached?
 			end

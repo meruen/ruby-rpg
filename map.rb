@@ -64,19 +64,19 @@ class Map
 		@strip = Gosu::Image.load_tiles @handle, chip, TILE_SIZE, TILE_SIZE, true
 		@characters = Array.new
 
-		@key_x = @handle.button_down? Gosu::KbX
-		@last_key_x = @key_x
+		@key_act = (@handle.button_down?(Controls::Jp::ACT) || @handle.button_down?(Controls::Kb::ACT))
+		@last_key_act = @key_act
 	end
 
 	# Update all the events and all the characters there are on map.
 	# @return [void]
 	def update
-		@key_x = @handle.button_down? Gosu::KbX
+		@key_act = (@handle.button_down?(Controls::Kb::ACT) || @handle.button_down?(Controls::Jp::ACT))
 		@events.each do |event|	event.update 
 			event.z = ZEV_BOT if event.y > @characters[0].y
 			event.z = ZEV_TOP if event.y < @characters[0].y						
 
-			if @key_x && !@last_key_x && colliding?(@characters[0], event)
+			if @key_act && !@last_key_act && colliding?(@characters[0], event)
 				event.on_press @characters[0].direction
 			end
 		end
@@ -96,7 +96,7 @@ class Map
 				@camera.y = - ((@handle.screen_h / 2) - yp)
 			end
 		#end
-		@last_key_x = @key_x
+		@last_key_act = @key_act
 	end
 
 	# Draw the map, events and characters.

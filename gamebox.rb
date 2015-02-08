@@ -9,6 +9,7 @@ load 'action/message.rb'
 load 'action/condition.rb'
 load 'action/codeblock.rb'
 load 'action/move_event.rb'
+load 'action/blink.rb'
 
 # This is the main Class for an ruby-rpg project. It's here that all the magic begins. 
 class Gamebox < Gosu::Window
@@ -25,7 +26,7 @@ class Gamebox < Gosu::Window
 		super 640, 480, false
 		@screen_w = 640
 		@screen_h = 480
-		@maps = Hash.new
+		@maps = Hash.new 
 	end
 
 	# Update your game.

@@ -4,6 +4,7 @@
 require 'gosu'
 load 'mod/Direction.rb'
 load 'mod/State.rb'
+load 'mod/controls.rb'
 
 # Class for playable characters. 
 class Character
@@ -97,13 +98,13 @@ class Character
 	# Read the main input keys.
 	# @return [void]
 	def read_keys
-		@keys[Gosu::KbLeft] = @handle.button_down? Gosu::KbLeft
-		@keys[Gosu::KbRight] = @handle.button_down? Gosu::KbRight
-		@keys[Gosu::KbUp] = @handle.button_down? Gosu::KbUp
-		@keys[Gosu::KbDown] = @handle.button_down? Gosu::KbDown
+		@keys[Gosu::KbLeft] = @handle.button_down?(Controls::Kb::LEFT) || @handle.button_down?(Controls::Jp::LEFT)
+		@keys[Gosu::KbRight] = @handle.button_down?(Controls::Kb::RIGHT) || @handle.button_down?(Controls::Jp::RIGHT)
+		@keys[Gosu::KbUp] = @handle.button_down?(Controls::Kb::UP) || @handle.button_down?(Controls::Jp::UP)
+		@keys[Gosu::KbDown] = @handle.button_down?(Controls::Kb::DOWN) || @handle.button_down?(Controls::Jp::DOWN)
 		
 		
-		if @handle.button_down?(Gosu::KbZ) && @energy > 0
+		if (@handle.button_down?(Controls::Jp::RUN) || @handle.button_down?(Controls::Kb::RUN)) && @energy > 0
 			@speed = 4 if quaded?
 			@energy -= 1 if @speed == 4
 		else
