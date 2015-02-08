@@ -20,7 +20,11 @@
   </head>
   <body>
     <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) {
+      var hasFrames = false;
+      try {
+        hasFrames = window.top.frames.main ? true : false;
+      } catch (e) { }
+      if (hasFrames) {
         document.getElementById('base_target').target = 'main';
         document.body.className = 'frames';
       }
@@ -80,6 +84,18 @@
   <li class="r2 ">
     <span class='object_link'><a href="Profile.html#atk-instance_method" title="Profile#atk (method)">#atk</a></span>
     <small>Profile</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Jazz.html#bgm-instance_method" title="Jazz#bgm (method)">#bgm</a></span>
+    <small>Jazz</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Jazz.html#bgm_playing-instance_method" title="Jazz#bgm_playing (method)">#bgm_playing</a></span>
+    <small>Jazz</small>
   </li>
   
 
@@ -162,38 +178,26 @@
   
 
   <li class="r2 ">
+    <span class='object_link'><a href="Frame.html#draw-instance_method" title="Frame#draw (method)">#draw</a></span>
+    <small>Frame</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="ActionManager.html#draw-instance_method" title="ActionManager#draw (method)">#draw</a></span>
     <small>ActionManager</small>
   </li>
   
 
-  <li class="r1 ">
-    <span class='object_link'><a href="Act/Message.html#draw-instance_method" title="Act::Message#draw (method)">#draw</a></span>
-    <small>Act::Message</small>
+  <li class="r2 ">
+    <span class='object_link'><a href="Act/Blink.html#draw-instance_method" title="Act::Blink#draw (method)">#draw</a></span>
+    <small>Act::Blink</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Act/Condition.html#draw-instance_method" title="Act::Condition#draw (method)">#draw</a></span>
     <small>Act::Condition</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Map.html#draw-instance_method" title="Map#draw (method)">#draw</a></span>
-    <small>Map</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="Gamebox.html#draw-instance_method" title="Gamebox#draw (method)">#draw</a></span>
-    <small>Gamebox</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Frame.html#draw-instance_method" title="Frame#draw (method)">#draw</a></span>
-    <small>Frame</small>
   </li>
   
 
@@ -204,20 +208,32 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Event.html#draw-instance_method" title="Event#draw (method)">#draw</a></span>
-    <small>Event</small>
+    <span class='object_link'><a href="Map.html#draw-instance_method" title="Map#draw (method)">#draw</a></span>
+    <small>Map</small>
   </li>
   
 
   <li class="r2 ">
+    <span class='object_link'><a href="Act/Message.html#draw-instance_method" title="Act::Message#draw (method)">#draw</a></span>
+    <small>Act::Message</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="Character.html#draw-instance_method" title="Character#draw (method)">#draw</a></span>
     <small>Character</small>
   </li>
   
 
+  <li class="r2 ">
+    <span class='object_link'><a href="Event.html#draw-instance_method" title="Event#draw (method)">#draw</a></span>
+    <small>Event</small>
+  </li>
+  
+
   <li class="r1 ">
-    <span class='object_link'><a href="Examples/Example01.html#draw-instance_method" title="Examples::Example01#draw (method)">#draw</a></span>
-    <small>Examples::Example01</small>
+    <span class='object_link'><a href="Gamebox.html#draw-instance_method" title="Gamebox#draw (method)">#draw</a></span>
+    <small>Gamebox</small>
   </li>
   
 
@@ -246,56 +262,68 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Act/MoveEvent.html#finish-instance_method" title="Act::MoveEvent#finish (method)">#finish</a></span>
-    <small>Act::MoveEvent</small>
-  </li>
-  
-
-  <li class="r1 ">
     <span class='object_link'><a href="Act/Condition.html#finish-instance_method" title="Act::Condition#finish (method)">#finish</a></span>
     <small>Act::Condition</small>
   </li>
   
 
+  <li class="r1 ">
+    <span class='object_link'><a href="Act/MoveEvent.html#finish-instance_method" title="Act::MoveEvent#finish (method)">#finish</a></span>
+    <small>Act::MoveEvent</small>
+  </li>
+  
+
   <li class="r2 ">
+    <span class='object_link'><a href="Act/Blink.html#finish-instance_method" title="Act::Blink#finish (method)">#finish</a></span>
+    <small>Act::Blink</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="Action.html#finish-instance_method" title="Action#finish (method)">#finish</a></span>
     <small>Action</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>
     <small>Action</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Act/Message.html#frame-instance_method" title="Act::Message#frame (method)">#frame</a></span>
     <small>Act::Message</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Profile.html#gauge-instance_method" title="Profile#gauge (method)">#gauge</a></span>
     <small>Profile</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="ActionManager.html#get_action-instance_method" title="ActionManager#get_action (method)">#get_action</a></span>
     <small>ActionManager</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Frame.html#h-instance_method" title="Frame#h (method)">#h</a></span>
     <small>Frame</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Map.html#h-instance_method" title="Map#h (method)">#h</a></span>
     <small>Map</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Act/WaitForKey.html#handle-instance_method" title="Act::WaitForKey#handle (method)">#handle</a></span>
+    <small>Act::WaitForKey</small>
   </li>
   
 
@@ -306,20 +334,20 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Action.html#handle-instance_method" title="Action#handle (method)">#handle</a></span>
-    <small>Action</small>
-  </li>
-  
-
-  <li class="r1 ">
     <span class='object_link'><a href="Act/Message.html#handle-instance_method" title="Act::Message#handle (method)">#handle</a></span>
     <small>Act::Message</small>
   </li>
   
 
+  <li class="r1 ">
+    <span class='object_link'><a href="Action.html#handle-instance_method" title="Action#handle (method)">#handle</a></span>
+    <small>Action</small>
+  </li>
+  
+
   <li class="r2 ">
-    <span class='object_link'><a href="Act/WaitForKey.html#handle-instance_method" title="Act::WaitForKey#handle (method)">#handle</a></span>
-    <small>Act::WaitForKey</small>
+    <span class='object_link'><a href="Jazz.html#handle-instance_method" title="Jazz#handle (method)">#handle</a></span>
+    <small>Jazz</small>
   </li>
   
 
@@ -342,20 +370,8 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Act/Condition.html#initialize-instance_method" title="Act::Condition#initialize (method)">#initialize</a></span>
-    <small>Act::Condition</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Action.html#initialize-instance_method" title="Action#initialize (method)">#initialize</a></span>
-    <small>Action</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="Frame.html#initialize-instance_method" title="Frame#initialize (method)">#initialize</a></span>
-    <small>Frame</small>
+    <span class='object_link'><a href="Camera.html#initialize-instance_method" title="Camera#initialize (method)">#initialize</a></span>
+    <small>Camera</small>
   </li>
   
 
@@ -366,20 +382,8 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Act/Message.html#initialize-instance_method" title="Act::Message#initialize (method)">#initialize</a></span>
-    <small>Act::Message</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Camera.html#initialize-instance_method" title="Camera#initialize (method)">#initialize</a></span>
-    <small>Camera</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="Examples/Example01.html#initialize-instance_method" title="Examples::Example01#initialize (method)">#initialize</a></span>
-    <small>Examples::Example01</small>
+    <span class='object_link'><a href="Frame.html#initialize-instance_method" title="Frame#initialize (method)">#initialize</a></span>
+    <small>Frame</small>
   </li>
   
 
@@ -390,8 +394,8 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Event.html#initialize-instance_method" title="Event#initialize (method)">#initialize</a></span>
-    <small>Event</small>
+    <span class='object_link'><a href="Act/Condition.html#initialize-instance_method" title="Act::Condition#initialize (method)">#initialize</a></span>
+    <small>Act::Condition</small>
   </li>
   
 
@@ -408,20 +412,56 @@
   
 
   <li class="r1 ">
+    <span class='object_link'><a href="Jazz.html#initialize-instance_method" title="Jazz#initialize (method)">#initialize</a></span>
+    <small>Jazz</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Examples/Example01.html#initialize-instance_method" title="Examples::Example01#initialize (method)">#initialize</a></span>
+    <small>Examples::Example01</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Act/Message.html#initialize-instance_method" title="Act::Message#initialize (method)">#initialize</a></span>
+    <small>Act::Message</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Event.html#initialize-instance_method" title="Event#initialize (method)">#initialize</a></span>
+    <small>Event</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="ActionManager.html#initialize-instance_method" title="ActionManager#initialize (method)">#initialize</a></span>
     <small>ActionManager</small>
   </li>
   
 
   <li class="r2 ">
+    <span class='object_link'><a href="Act/WaitForKey.html#initialize-instance_method" title="Act::WaitForKey#initialize (method)">#initialize</a></span>
+    <small>Act::WaitForKey</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="Profile.html#initialize-instance_method" title="Profile#initialize (method)">#initialize</a></span>
     <small>Profile</small>
   </li>
   
 
+  <li class="r2 ">
+    <span class='object_link'><a href="Action.html#initialize-instance_method" title="Action#initialize (method)">#initialize</a></span>
+    <small>Action</small>
+  </li>
+  
+
   <li class="r1 ">
-    <span class='object_link'><a href="Act/WaitForKey.html#initialize-instance_method" title="Act::WaitForKey#initialize (method)">#initialize</a></span>
-    <small>Act::WaitForKey</small>
+    <span class='object_link'><a href="Act/Blink.html#initialize-instance_method" title="Act::Blink#initialize (method)">#initialize</a></span>
+    <small>Act::Blink</small>
   </li>
   
 
@@ -462,80 +502,104 @@
   
 
   <li class="r2 ">
+    <span class='object_link'><a href="Jazz.html#load_directory-instance_method" title="Jazz#load_directory (method)">#load_directory</a></span>
+    <small>Jazz</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="Profile.html#luk-instance_method" title="Profile#luk (method)">#luk</a></span>
     <small>Profile</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Profile.html#lv-instance_method" title="Profile#lv (method)">#lv</a></span>
     <small>Profile</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Gamebox.html#map-instance_method" title="Gamebox#map (method)">#map</a></span>
     <small>Gamebox</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Gamebox.html#maps-instance_method" title="Gamebox#maps (method)">#maps</a></span>
     <small>Gamebox</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Profile.html#max_gauge-instance_method" title="Profile#max_gauge (method)">#max_gauge</a></span>
     <small>Profile</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Profile.html#max_hp-instance_method" title="Profile#max_hp (method)">#max_hp</a></span>
     <small>Profile</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Profile.html#max_lv-instance_method" title="Profile#max_lv (method)">#max_lv</a></span>
     <small>Profile</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Camera.html#move-instance_method" title="Camera#move (method)">#move</a></span>
     <small>Camera</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Event.html#on_press-instance_method" title="Event#on_press (method)">#on_press</a></span>
     <small>Event</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Event.html#on_touch-instance_method" title="Event#on_touch (method)">#on_touch</a></span>
     <small>Event</small>
   </li>
   
 
+  <li class="r1 ">
+    <span class='object_link'><a href="Jazz.html#play_bgm-instance_method" title="Jazz#play_bgm (method)">#play_bgm</a></span>
+    <small>Jazz</small>
+  </li>
+  
+
   <li class="r2 ">
-    <span class='object_link'><a href="Act/Message.html#position-instance_method" title="Act::Message#position (method)">#position</a></span>
-    <small>Act::Message</small>
+    <span class='object_link'><a href="Jazz.html#play_se-instance_method" title="Jazz#play_se (method)">#play_se</a></span>
+    <small>Jazz</small>
   </li>
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Act/MoveEvent.html#prepare-instance_method" title="Act::MoveEvent#prepare (method)">#prepare</a></span>
-    <small>Act::MoveEvent</small>
+    <span class='object_link'><a href="Act/Message.html#position-instance_method" title="Act::Message#position (method)">#position</a></span>
+    <small>Act::Message</small>
   </li>
   
 
   <li class="r2 ">
     <span class='object_link'><a href="Act/Condition.html#prepare-instance_method" title="Act::Condition#prepare (method)">#prepare</a></span>
     <small>Act::Condition</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Act/Blink.html#prepare-instance_method" title="Act::Blink#prepare (method)">#prepare</a></span>
+    <small>Act::Blink</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Act/MoveEvent.html#prepare-instance_method" title="Act::MoveEvent#prepare (method)">#prepare</a></span>
+    <small>Act::MoveEvent</small>
   </li>
   
 
@@ -600,31 +664,31 @@
   
 
   <li class="r1 ">
+    <span class='object_link'><a href="Jazz.html#se-instance_method" title="Jazz#se (method)">#se</a></span>
+    <small>Jazz</small>
+  </li>
+  
+
+  <li class="r2 ">
     <span class='object_link'><a href="Character.html#sensitive-instance_method" title="Character#sensitive (method)">#sensitive</a></span>
     <small>Character</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Event.html#set_action-instance_method" title="Event#set_action (method)">#set_action</a></span>
     <small>Event</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Character.html#set_img-instance_method" title="Character#set_img (method)">#set_img</a></span>
     <small>Character</small>
   </li>
   
 
-  <li class="r2 ">
-    <span class='object_link'><a href="Character.html#set_location-instance_method" title="Character#set_location (method)">#set_location</a></span>
-    <small>Character</small>
-  </li>
-  
-
   <li class="r1 ">
-    <span class='object_link'><a href="Character.html#speed-instance_method" title="Character#speed (method)">#speed</a></span>
+    <span class='object_link'><a href="Character.html#set_location-instance_method" title="Character#set_location (method)">#set_location</a></span>
     <small>Character</small>
   </li>
   
@@ -636,20 +700,32 @@
   
 
   <li class="r1 ">
+    <span class='object_link'><a href="Character.html#speed-instance_method" title="Character#speed (method)">#speed</a></span>
+    <small>Character</small>
+  </li>
+  
+
+  <li class="r2 ">
     <span class='object_link'><a href="Timer.html#start-instance_method" title="Timer#start (method)">#start</a></span>
     <small>Timer</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Character.html#state-instance_method" title="Character#state (method)">#state</a></span>
     <small>Character</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Act/MoveEvent.html#steps-instance_method" title="Act::MoveEvent#steps (method)">#steps</a></span>
     <small>Act::MoveEvent</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Jazz.html#stop_bgm-instance_method" title="Jazz#stop_bgm (method)">#stop_bgm</a></span>
+    <small>Jazz</small>
   </li>
   
 
@@ -678,44 +754,8 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Action.html#update-instance_method" title="Action#update (method)">#update</a></span>
-    <small>Action</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Act/WaitForKey.html#update-instance_method" title="Act::WaitForKey#update (method)">#update</a></span>
-    <small>Act::WaitForKey</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="Act/Wait.html#update-instance_method" title="Act::Wait#update (method)">#update</a></span>
-    <small>Act::Wait</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Character.html#update-instance_method" title="Character#update (method)">#update</a></span>
-    <small>Character</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="Map.html#update-instance_method" title="Map#update (method)">#update</a></span>
-    <small>Map</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Act/Condition.html#update-instance_method" title="Act::Condition#update (method)">#update</a></span>
-    <small>Act::Condition</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="Event.html#update-instance_method" title="Event#update (method)">#update</a></span>
-    <small>Event</small>
+    <span class='object_link'><a href="Gamebox.html#update-instance_method" title="Gamebox#update (method)">#update</a></span>
+    <small>Gamebox</small>
   </li>
   
 
@@ -726,14 +766,14 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Act/Message.html#update-instance_method" title="Act::Message#update (method)">#update</a></span>
-    <small>Act::Message</small>
+    <span class='object_link'><a href="Character.html#update-instance_method" title="Character#update (method)">#update</a></span>
+    <small>Character</small>
   </li>
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Gamebox.html#update-instance_method" title="Gamebox#update (method)">#update</a></span>
-    <small>Gamebox</small>
+    <span class='object_link'><a href="Act/Condition.html#update-instance_method" title="Act::Condition#update (method)">#update</a></span>
+    <small>Act::Condition</small>
   </li>
   
 
@@ -744,32 +784,68 @@
   
 
   <li class="r1 ">
+    <span class='object_link'><a href="Map.html#update-instance_method" title="Map#update (method)">#update</a></span>
+    <small>Map</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Act/Wait.html#update-instance_method" title="Act::Wait#update (method)">#update</a></span>
+    <small>Act::Wait</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Action.html#update-instance_method" title="Action#update (method)">#update</a></span>
+    <small>Action</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Event.html#update-instance_method" title="Event#update (method)">#update</a></span>
+    <small>Event</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Act/Blink.html#update-instance_method" title="Act::Blink#update (method)">#update</a></span>
+    <small>Act::Blink</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="Act/WaitForKey.html#update-instance_method" title="Act::WaitForKey#update (method)">#update</a></span>
+    <small>Act::WaitForKey</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="Act/Message.html#update-instance_method" title="Act::Message#update (method)">#update</a></span>
+    <small>Act::Message</small>
+  </li>
+  
+
+  <li class="r2 ">
     <span class='object_link'><a href="Character.html#visible-instance_method" title="Character#visible (method)">#visible</a></span>
     <small>Character</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Character.html#visible%3F-instance_method" title="Character#visible? (method)">#visible?</a></span>
     <small>Character</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="Frame.html#w-instance_method" title="Frame#w (method)">#w</a></span>
     <small>Frame</small>
   </li>
   
 
-  <li class="r2 ">
+  <li class="r1 ">
     <span class='object_link'><a href="Map.html#w-instance_method" title="Map#w (method)">#w</a></span>
     <small>Map</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="Character.html#x-instance_method" title="Character#x (method)">#x</a></span>
-    <small>Character</small>
   </li>
   
 
@@ -780,13 +856,13 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Frame.html#x-instance_method" title="Frame#x (method)">#x</a></span>
-    <small>Frame</small>
+    <span class='object_link'><a href="Character.html#x-instance_method" title="Character#x (method)">#x</a></span>
+    <small>Character</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Frame.html#y-instance_method" title="Frame#y (method)">#y</a></span>
+    <span class='object_link'><a href="Frame.html#x-instance_method" title="Frame#x (method)">#x</a></span>
     <small>Frame</small>
   </li>
   
@@ -804,12 +880,18 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Frame.html#z-instance_method" title="Frame#z (method)">#z</a></span>
+    <span class='object_link'><a href="Frame.html#y-instance_method" title="Frame#y (method)">#y</a></span>
     <small>Frame</small>
   </li>
   
 
   <li class="r2 ">
+    <span class='object_link'><a href="Frame.html#z-instance_method" title="Frame#z (method)">#z</a></span>
+    <small>Frame</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="Event.html#z-instance_method" title="Event#z (method)">#z</a></span>
     <small>Event</small>
   </li>

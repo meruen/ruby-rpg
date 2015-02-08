@@ -6,7 +6,7 @@
 <title>
   Class: Examples::Example01
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -126,28 +126,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#draw-instance_method" title="#draw (instance method)">- (Object) <strong>draw</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (Example01) <strong>initialize</strong> </a>
     
 
@@ -184,7 +162,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Gamebox.html" title="Gamebox (class)">Gamebox</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Gamebox.html#update-instance_method" title="Gamebox#update (method)">#update</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Gamebox.html#draw-instance_method" title="Gamebox#draw (method)">#draw</a></span>, <span class='object_link'><a href="../Gamebox.html#update-instance_method" title="Gamebox#update (method)">#update</a></span></p>
 
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
@@ -215,7 +193,6 @@
       <pre class="lines">
 
 
-8
 9
 10
 11
@@ -227,23 +204,38 @@
 17
 18
 19
-20</pre>
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'example/example01.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'example/example01.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
 	<span class='kw'>super</span>
-       <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_caption'>caption</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Example01</span><span class='tstring_end'>&#39;</span></span>
-      	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='op'>=</span> <span class='const'>Map</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>map/map01generic.map</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/chip/town08a.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>30</span><span class='comma'>,</span> <span class='int'>16</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/chip/map01.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_caption'>caption</span> <span class='op'>=</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Example01</span><span class='tstring_end'>&#39;</span></span>
+       	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='op'>=</span> <span class='const'>Map</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>map/map01generic.map</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/chip/town08a.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>30</span><span class='comma'>,</span> <span class='int'>16</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/chip/map01.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span>
+	<span class='ivar'>@jazz</span> <span class='op'>=</span> <span class='const'>Jazz</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/bgm</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/se</span><span class='tstring_end'>&#39;</span></span>
+	<span class='ivar'>@jazz</span><span class='period'>.</span><span class='id identifier rubyid_play_bgm'>play_bgm</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mm2</span><span class='tstring_end'>&#39;</span></span>
+	
+	<span class='id identifier rubyid_character'>character</span> <span class='op'>=</span> <span class='const'>Character</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/char/superman_prime_01.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>256</span><span class='comma'>,</span> <span class='int'>256</span>
+        <span class='id identifier rubyid_ev001'>ev001</span> <span class='op'>=</span> <span class='const'>Event</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/char/superman.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>6</span> <span class='op'>*</span> <span class='const'>Map</span><span class='op'>::</span><span class='const'>TILE_SIZE</span><span class='comma'>,</span> <span class='int'>5</span> <span class='op'>*</span> <span class='const'>Map</span><span class='op'>::</span><span class='const'>TILE_SIZE</span>
+	<span class='id identifier rubyid_ev002'>ev002</span> <span class='op'>=</span> <span class='const'>Event</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/char/superman.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>3</span> <span class='op'>*</span> <span class='const'>Map</span><span class='op'>::</span><span class='const'>TILE_SIZE</span><span class='comma'>,</span> <span class='int'>4</span> <span class='op'>*</span> <span class='const'>Map</span><span class='op'>::</span><span class='const'>TILE_SIZE</span>
 
-  	    <span class='id identifier rubyid_character'>character</span> <span class='op'>=</span> <span class='const'>Character</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/char/superman_prime_01.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>256</span><span class='comma'>,</span> <span class='int'>256</span>
-       <span class='id identifier rubyid_ev001'>ev001</span> <span class='op'>=</span> <span class='const'>Event</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>res/char/superman.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>6</span> <span class='op'>*</span> <span class='const'>Map</span><span class='op'>::</span><span class='const'>TILE_SIZE</span><span class='comma'>,</span> <span class='int'>5</span> <span class='op'>*</span> <span class='const'>Map</span><span class='op'>::</span><span class='const'>TILE_SIZE</span>
-      	<span class='id identifier rubyid_ev001'>ev001</span><span class='period'>.</span><span class='id identifier rubyid_action_manager'>action_manager</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='const'>Act</span><span class='op'>::</span><span class='const'>Message</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This is an example to use class Message...</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_ev001'>ev001</span><span class='period'>.</span><span class='id identifier rubyid_action_manager'>action_manager</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='const'>Act</span><span class='op'>::</span><span class='const'>Message</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This is an example to use class Message...</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 	<span class='id identifier rubyid_ev001'>ev001</span><span class='period'>.</span><span class='id identifier rubyid_action_manager'>action_manager</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='const'>Act</span><span class='op'>::</span><span class='const'>Message</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>And understand a bit the ActionManager.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+	
+	<span class='id identifier rubyid_ev002'>ev002</span><span class='period'>.</span><span class='id identifier rubyid_action_manager'>action_manager</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='const'>Act</span><span class='op'>::</span><span class='const'>Message</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Seems ok.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
-       <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_ev001'>ev001</span>
-      	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_characters'>characters</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_character'>character</span>
+       	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_ev001'>ev001</span>
+	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_events'>events</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_ev002'>ev002</span>
+       	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_characters'>characters</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_character'>character</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -252,49 +244,13 @@
   
 </div>
 
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="draw-instance_method">
-  
-    - (<tt>Object</tt>) <strong>draw</strong> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-22
-23
-24</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'example/example01.rb', line 22</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
-	<span class='kw'>super</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 
     <div id="footer">
-  Generated on Fri Feb  6 15:47:42 2015 by
+  Generated on Sun Feb  8 12:37:16 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.0.0).
 </div>
 
   </body>

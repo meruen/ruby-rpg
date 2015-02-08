@@ -6,7 +6,7 @@
 <title>
   Class: Map
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -636,8 +636,8 @@ UNDER MAINTENANCE.</p>
 	<span class='ivar'>@strip</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Image</span><span class='period'>.</span><span class='id identifier rubyid_load_tiles'>load_tiles</span> <span class='ivar'>@handle</span><span class='comma'>,</span> <span class='id identifier rubyid_chip'>chip</span><span class='comma'>,</span> <span class='const'>TILE_SIZE</span><span class='comma'>,</span> <span class='const'>TILE_SIZE</span><span class='comma'>,</span> <span class='kw'>true</span>
 	<span class='ivar'>@characters</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
-	<span class='ivar'>@key_x</span> <span class='op'>=</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KbX</span>
-	<span class='ivar'>@last_key_x</span> <span class='op'>=</span> <span class='ivar'>@key_x</span>
+	<span class='ivar'>@key_act</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Controls</span><span class='op'>::</span><span class='const'>Jp</span><span class='op'>::</span><span class='const'>ACT</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Controls</span><span class='op'>::</span><span class='const'>Kb</span><span class='op'>::</span><span class='const'>ACT</span><span class='rparen'>)</span><span class='rparen'>)</span>
+	<span class='ivar'>@last_key_act</span> <span class='op'>=</span> <span class='ivar'>@key_act</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1398,12 +1398,12 @@ UNDER MAINTENANCE.</p>
       <pre class="code"><span class="info file"># File 'map.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
-	<span class='ivar'>@key_x</span> <span class='op'>=</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>KbX</span>
+	<span class='ivar'>@key_act</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Controls</span><span class='op'>::</span><span class='const'>Kb</span><span class='op'>::</span><span class='const'>ACT</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_button_down?'>button_down?</span><span class='lparen'>(</span><span class='const'>Controls</span><span class='op'>::</span><span class='const'>Jp</span><span class='op'>::</span><span class='const'>ACT</span><span class='rparen'>)</span><span class='rparen'>)</span>
 	<span class='ivar'>@events</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_event'>event</span><span class='op'>|</span>	<span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> 
 		<span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='const'>ZEV_BOT</span> <span class='kw'>if</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>&gt;</span> <span class='ivar'>@characters</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span>
 		<span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='const'>ZEV_TOP</span> <span class='kw'>if</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>&lt;</span> <span class='ivar'>@characters</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span>						
 
-		<span class='kw'>if</span> <span class='ivar'>@key_x</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@last_key_x</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_colliding?'>colliding?</span><span class='lparen'>(</span><span class='ivar'>@characters</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
+		<span class='kw'>if</span> <span class='ivar'>@key_act</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@last_key_act</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_colliding?'>colliding?</span><span class='lparen'>(</span><span class='ivar'>@characters</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
 			<span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_on_press'>on_press</span> <span class='ivar'>@characters</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_direction'>direction</span>
 		<span class='kw'>end</span>
 	<span class='kw'>end</span>
@@ -1423,7 +1423,7 @@ UNDER MAINTENANCE.</p>
 			<span class='ivar'>@camera</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_screen_h'>screen_h</span> <span class='op'>/</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='id identifier rubyid_yp'>yp</span><span class='rparen'>)</span>
 		<span class='kw'>end</span>
 	<span class='comment'>#end
-</span>	<span class='ivar'>@last_key_x</span> <span class='op'>=</span> <span class='ivar'>@key_x</span>
+</span>	<span class='ivar'>@last_key_act</span> <span class='op'>=</span> <span class='ivar'>@key_act</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1435,9 +1435,9 @@ UNDER MAINTENANCE.</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Feb  6 15:47:42 2015 by
+  Generated on Sun Feb  8 12:37:16 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.0.0).
 </div>
 
   </body>
