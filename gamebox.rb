@@ -9,7 +9,7 @@ load 'action/message.rb'
 load 'action/condition.rb'
 load 'action/codeblock.rb'
 load 'action/move_event.rb'
-load 'action/blink.rb'
+load 'action/fade.rb'
 
 # This is the main Class for an ruby-rpg project. It's here that all the magic begins. 
 class Gamebox < Gosu::Window
@@ -21,11 +21,18 @@ class Gamebox < Gosu::Window
 	attr_reader :screen_w
 	# @return [Fixnum] Screen Height.
 	attr_reader :screen_h
+	# @return [Fixnum] Luminosity of screen (0...255).
+	attr_accessor :light
 
-	def initialize
-		super 640, 480, false
-		@screen_w = 640
-		@screen_h = 480
+	# @param [Fixnum] screen_w Screen width.
+	# @param [Fixnum] screen_h Screen height.
+	# @param [Fixnum] light Luminosity of screen (0...255).
+	# @param [true/fase] fullscreen True if it's fullscreen.
+	def initialize(screen_w = 640, screen_h = 480, light = 0, fullscreen = false)
+		super screen_w, screen_h, fullscreen
+		@screen_w = screen_w
+		@screen_h = screen_h
+		@light = light
 		@maps = Hash.new 
 	end
 
@@ -33,11 +40,14 @@ class Gamebox < Gosu::Window
 	# @return [void]
 	def update
 		@map.update if @map != nil
+		
+		@light_color = Gosu::Color.new @light, 0, 0, 0
 	end
 
 	# Draw the content of your game.
 	# @return [void]
 	def draw
 		@map.draw if @map != nil
+		self.draw_quad 0, 0, @light_color, @screen_w, 0, @light_color, 0, @screen_h, @light_color, @screen_w, @screen_h, @light_color, 2
 	end
 end

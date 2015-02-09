@@ -21,7 +21,6 @@ class Jazz
 		@bgm = Hash.new
 		@se = Hash.new
 		load_directory bgm_path, se_path
-		puts @bgm
 	end
 
 	# Play a bgm from BGM hash.

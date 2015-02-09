@@ -271,7 +271,7 @@ condition is satisfied.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Condition) <strong>initialize</strong>(handle, str, actions) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Condition) <strong>initialize</strong>(handle, str, actions, else_actions = nil) </a>
     
 
     
@@ -357,7 +357,7 @@ condition is satisfied.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Act::Condition (class)">Condition</a></span></tt>) <strong>initialize</strong>(handle, str, actions) 
+    - (<tt><span class='object_link'><a href="" title="Act::Condition (class)">Condition</a></span></tt>) <strong>initialize</strong>(handle, str, actions, else_actions = nil) 
   
 
   
@@ -440,12 +440,13 @@ condition is satisfied.</p>
 23
 24
 25
-26</pre>
+26
+27</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'action/condition.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_actions'>actions</span><span class='comma'>,</span> <span class='id identifier rubyid_else_actions'>else_actions</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
 	<span class='kw'>super</span> <span class='id identifier rubyid_handle'>handle</span><span class='comma'>,</span> <span class='kw'>nil</span>	
 	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>=</span> <span class='kw'>false</span>
 	<span class='ivar'>@str</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span>
@@ -453,6 +454,7 @@ condition is satisfied.</p>
 	<span class='ivar'>@action_manager</span> <span class='op'>=</span> <span class='const'>ActionManager</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@handle</span><span class='comma'>,</span> <span class='id identifier rubyid_actions'>actions</span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
 	<span class='ivar'>@evalued</span> <span class='op'>=</span> <span class='kw'>false</span>
+	<span class='ivar'>@else_action_manager</span> <span class='op'>=</span> <span class='const'>ActionManager</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@handle</span><span class='comma'>,</span> <span class='id identifier rubyid_else_actions'>else_actions</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -702,15 +704,21 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
-55
-56
-57</pre>
+58
+59
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span>
-	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@evalued</span>
+	<span class='kw'>if</span> <span class='ivar'>@evalued</span> <span class='kw'>then</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>else</span> 
+		<span class='kw'>if</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='kw'>then</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>end</span>
+	<span class='kw'>end</span>
+
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -743,14 +751,14 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
-46
-47
-48
 49
-50</pre>
+50
+51
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span>
 	<span class='kw'>super</span>
@@ -788,19 +796,21 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
-30
 31
 32
 33
-34</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
 	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>=</span> <span class='kw'>false</span>
 	<span class='ivar'>@evalued</span> <span class='op'>=</span> <span class='kw'>false</span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
+	<span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span> <span class='kw'>if</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>!=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -833,19 +843,21 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
-38
-39
 40
 41
-42</pre>
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
 	<span class='ivar'>@evalued</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='ivar'>@str</span><span class='rparen'>)</span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='ivar'>@evalued</span>
-	<span class='id identifier rubyid_finish'>finish</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@evalued</span> <span class='op'>||</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span>
+	<span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@evalued</span>
+	<span class='id identifier rubyid_finish'>finish</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@evalued</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>!=</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>||</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -857,7 +869,7 @@ condition is satisfied.</p>
 </div>
 
     <div id="footer">
-  Generated on Sun Feb  8 12:37:16 2015 by
+  Generated on Sun Feb  8 22:47:08 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.0.0).
 </div>

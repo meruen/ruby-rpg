@@ -15,7 +15,7 @@ module Act
 		# @param [Gamebox] handle Main Gamebox.
 		# @param [String] str Evaluation string.
 		# @param [Array] actions Array of actions that will be putted on ActionManager.
-		def initialize(handle, str, actions)
+		def initialize(handle, str, actions, else_actions = nil)
 			super handle, nil	
 			self.finished = false
 			@str = str
@@ -23,6 +23,7 @@ module Act
 			@action_manager = ActionManager.new @handle, actions
 			@action_manager.restart
 			@evalued = false
+			@else_action_manager = ActionManager.new @handle, else_actions
 		end
 
 		# Prepare the condition for check and execution.
@@ -31,6 +32,7 @@ module Act
 			self.finished = false
 			@evalued = false
 			@action_manager.restart
+			@else_action_manager.restart if @else_action_manager.action != nil
 		end
 
 		# Update the actual action if the condition is satisfied and is executing.
@@ -38,7 +40,8 @@ module Act
 		def update
 			@evalued = true if eval(@str)
 			@action_manager.update if @evalued
-			finish if !@evalued || @action_manager.finished
+			@else_action_manager.update if !@evalued
+			finish if (!@evalued && @else_action_manager.action != nil) || @action_manager.finished || @else_action_manager.finished
 		end
 
 		# Finish the internal ActionManager.
@@ -53,7 +56,10 @@ module Act
 		# @param [Camera] camera Main Camera of your project.
 		# @return [void]
 		def draw(camera)
-			@action_manager.draw(camera) if @evalued
+			if @evalued then @action_manager.draw(camera) else 
+				if @else_action_manager.action != nil then @else_action_manager.draw(camera) end
+			end
+
 		end
 	end
 end

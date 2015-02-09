@@ -127,6 +127,33 @@ magic begins.</p>
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#light-instance_method" title="#light (instance method)">- (Fixnum) <strong>light</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Luminosity of screen (0…255).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#map-instance_method" title="#map (instance method)">- (Map) <strong>map</strong> </a>
     
 
@@ -276,7 +303,7 @@ magic begins.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Gamebox) <strong>initialize</strong> </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Gamebox) <strong>initialize</strong>(screen_w = 640, screen_h = 480, light = 0, fullscreen = false) </a>
     
 
     
@@ -333,7 +360,7 @@ magic begins.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Gamebox (class)">Gamebox</a></span></tt>) <strong>initialize</strong> 
+    - (<tt><span class='object_link'><a href="" title="Gamebox (class)">Gamebox</a></span></tt>) <strong>initialize</strong>(screen_w = 640, screen_h = 480, light = 0, fullscreen = false) 
   
 
   
@@ -348,7 +375,83 @@ magic begins.</p>
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>screen_w</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>640</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Screen width.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>screen_h</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>480</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Screen height.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>light</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Luminosity of screen (0…255).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>fullscreen</span>
+      
+      
+        <span class='type'>(<tt>true/fase</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>True if it&#39;s fullscreen.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -356,20 +459,22 @@ magic begins.</p>
       <pre class="lines">
 
 
-25
-26
-27
-28
-29
-30</pre>
+31
+32
+33
+34
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 31</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
-	<span class='kw'>super</span> <span class='int'>640</span><span class='comma'>,</span> <span class='int'>480</span><span class='comma'>,</span> <span class='kw'>false</span>
-	<span class='ivar'>@screen_w</span> <span class='op'>=</span> <span class='int'>640</span>
-	<span class='ivar'>@screen_h</span> <span class='op'>=</span> <span class='int'>480</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_screen_w'>screen_w</span> <span class='op'>=</span> <span class='int'>640</span><span class='comma'>,</span> <span class='id identifier rubyid_screen_h'>screen_h</span> <span class='op'>=</span> <span class='int'>480</span><span class='comma'>,</span> <span class='id identifier rubyid_light'>light</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_fullscreen'>fullscreen</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+	<span class='kw'>super</span> <span class='id identifier rubyid_screen_w'>screen_w</span><span class='comma'>,</span> <span class='id identifier rubyid_screen_h'>screen_h</span><span class='comma'>,</span> <span class='id identifier rubyid_fullscreen'>fullscreen</span>
+	<span class='ivar'>@screen_w</span> <span class='op'>=</span> <span class='id identifier rubyid_screen_w'>screen_w</span>
+	<span class='ivar'>@screen_h</span> <span class='op'>=</span> <span class='id identifier rubyid_screen_h'>screen_h</span>
+	<span class='ivar'>@light</span> <span class='op'>=</span> <span class='id identifier rubyid_light'>light</span>
 	<span class='ivar'>@maps</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> 
 <span class='kw'>end</span></pre>
     </td>
@@ -383,9 +488,70 @@ magic begins.</p>
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="map=-instance_method"></span>
+      <span id="light=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="map-instance_method">
+  <h3 class="signature first" id="light-instance_method">
+  
+    - (<tt>Fixnum</tt>) <strong>light</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Luminosity of screen (0…255).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Luminosity of screen (0…255).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_light'>light</span>
+  <span class='ivar'>@light</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="map=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="map-instance_method">
   
     - (<tt><span class='object_link'><a href="Map.html" title="Map (class)">Map</a></span></tt>) <strong>map</strong> 
   
@@ -660,15 +826,17 @@ here.</p>
       <pre class="lines">
 
 
-40
-41
-42</pre>
+49
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
 	<span class='ivar'>@map</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='kw'>if</span> <span class='ivar'>@map</span> <span class='op'>!=</span> <span class='kw'>nil</span>
+	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_draw_quad'>draw_quad</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='ivar'>@screen_w</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@screen_h</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='ivar'>@screen_w</span><span class='comma'>,</span> <span class='ivar'>@screen_h</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='int'>2</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -701,15 +869,19 @@ here.</p>
       <pre class="lines">
 
 
-34
-35
-36</pre>
+41
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
 	<span class='ivar'>@map</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='ivar'>@map</span> <span class='op'>!=</span> <span class='kw'>nil</span>
+	
+	<span class='ivar'>@light_color</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@light</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -721,7 +893,7 @@ here.</p>
 </div>
 
     <div id="footer">
-  Generated on Sun Feb  8 12:37:16 2015 by
+  Generated on Sun Feb  8 22:47:09 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.0.0).
 </div>

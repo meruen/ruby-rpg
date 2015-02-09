@@ -447,8 +447,7 @@
 21
 22
 23
-24
-25</pre>
+24</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'jazz.rb', line 19</span>
@@ -458,7 +457,6 @@
 	<span class='ivar'>@bgm</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 	<span class='ivar'>@se</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 	<span class='id identifier rubyid_load_directory'>load_directory</span> <span class='id identifier rubyid_bgm_path'>bgm_path</span><span class='comma'>,</span> <span class='id identifier rubyid_se_path'>se_path</span>
-	<span class='id identifier rubyid_puts'>puts</span> <span class='ivar'>@bgm</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -736,6 +734,7 @@
       <pre class="lines">
 
 
+58
 59
 60
 61
@@ -744,11 +743,10 @@
 64
 65
 66
-67
-68</pre>
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'jazz.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'jazz.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_directory'>load_directory</span><span class='lparen'>(</span><span class='id identifier rubyid_bgm_path'>bgm_path</span><span class='comma'>,</span> <span class='id identifier rubyid_se_path'>se_path</span><span class='rparen'>)</span>
 	<span class='ivar'>@bgm</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
@@ -847,6 +845,7 @@
       <pre class="lines">
 
 
+30
 31
 32
 33
@@ -860,11 +859,10 @@
 41
 42
 43
-44
-45</pre>
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'jazz.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'jazz.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_play_bgm'>play_bgm</span><span class='lparen'>(</span><span class='id identifier rubyid_bgm'>bgm</span><span class='comma'>,</span> <span class='id identifier rubyid_looping'>looping</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='ivar'>@bgm</span><span class='lbracket'>[</span><span class='id identifier rubyid_bgm'>bgm</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>
@@ -986,15 +984,15 @@
       <pre class="lines">
 
 
+51
 52
 53
 54
 55
-56
-57</pre>
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'jazz.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'jazz.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_play_se'>play_se</span><span class='lparen'>(</span><span class='id identifier rubyid_se'>se</span><span class='comma'>,</span> <span class='id identifier rubyid_volume'>volume</span> <span class='op'>=</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_speed'>speed</span> <span class='op'>=</span> <span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_looping'>looping</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='ivar'>@se</span><span class='lbracket'>[</span><span class='id identifier rubyid_se'>se</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>
@@ -1022,12 +1020,12 @@
       <pre class="lines">
 
 
+69
 70
-71
-72</pre>
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'jazz.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'jazz.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stop_bgm'>stop_bgm</span>
 	<span class='ivar'>@bgm_playing</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span> <span class='kw'>if</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Song</span><span class='op'>::</span><span class='id identifier rubyid_current_song'>current_song</span> <span class='op'>!=</span> <span class='kw'>nil</span>
@@ -1042,7 +1040,7 @@
 </div>
 
     <div id="footer">
-  Generated on Sun Feb  8 12:37:16 2015 by
+  Generated on Sun Feb  8 22:47:09 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.0.0).
 </div>
