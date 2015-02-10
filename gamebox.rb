@@ -11,6 +11,8 @@ load 'action/codeblock.rb'
 load 'action/move_event.rb'
 load 'action/fade.rb'
 
+VERSION ||= '0.2.2'
+
 # This is the main Class for an ruby-rpg project. It's here that all the magic begins. 
 class Gamebox < Gosu::Window
 	# @return [Map] Current map.
@@ -34,13 +36,13 @@ class Gamebox < Gosu::Window
 		@screen_h = screen_h
 		@light = light
 		@maps = Hash.new 
+		puts "Everything is up! ruby-rpg version #{VERSION}"
 	end
 
 	# Update your game.
 	# @return [void]
 	def update
-		@map.update if @map != nil
-		
+		@map.update if @map != nil		
 		@light_color = Gosu::Color.new @light, 0, 0, 0
 	end
 

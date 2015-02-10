@@ -225,7 +225,7 @@ activated.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#on_press-instance_method" title="#on_press (instance method)">- (void) <strong>on_press</strong>(direction, look = true) </a>
+      <a href="#on_press-instance_method" title="#on_press (instance method)">- (void) <strong>on_press</strong>(character, look = true) </a>
     
 
     
@@ -790,13 +790,13 @@ activated.</p>
       <pre class="lines">
 
 
-81
-82
-83
-84</pre>
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
 	<span class='kw'>super</span> <span class='ivar'>@z</span>
@@ -810,7 +810,7 @@ activated.</p>
       <div class="method_details ">
   <h3 class="signature " id="on_press-instance_method">
   
-    - (<tt>void</tt>) <strong>on_press</strong>(direction, look = true) 
+    - (<tt>void</tt>) <strong>on_press</strong>(character, look = true) 
   
 
   
@@ -830,7 +830,7 @@ activated.</p>
   
     <li>
       
-        <span class='name'>direction</span>
+        <span class='name'>character</span>
       
       
         <span class='type'>(<tt><span class='object_link'><a href="Direction.html" title="Direction (module)">Direction</a></span></tt>)</span>
@@ -839,7 +839,7 @@ activated.</p>
       
         &mdash;
         <div class='inline'>
-<p>Direction that Character have when act.</p>
+<p>Character pressing.</p>
 </div>
       
     </li>
@@ -888,15 +888,21 @@ activated.</p>
 57
 58
 59
-60</pre>
+60
+61
+62
+63</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'event.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_on_press'>on_press</span><span class='lparen'>(</span><span class='id identifier rubyid_direction'>direction</span><span class='comma'>,</span> <span class='id identifier rubyid_look'>look</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_on_press'>on_press</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='comma'>,</span> <span class='id identifier rubyid_look'>look</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
+	<span class='ivar'>@character</span> <span class='op'>=</span> <span class='id identifier rubyid_character'>character</span>
+	<span class='id identifier rubyid_direction'>direction</span> <span class='op'>=</span> <span class='id identifier rubyid_character'>character</span><span class='period'>.</span><span class='id identifier rubyid_direction'>direction</span>
 	<span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@activated</span>
 		<span class='ivar'>@activated</span> <span class='op'>=</span> <span class='kw'>true</span>
 		<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
+		<span class='id identifier rubyid_character'>character</span><span class='period'>.</span><span class='id identifier rubyid_sensitive'>sensitive</span> <span class='op'>=</span> <span class='kw'>false</span>
 	<span class='kw'>end</span>
 	<span class='kw'>case</span> <span class='id identifier rubyid_direction'>direction</span>
 		<span class='kw'>when</span> <span class='const'>Direction</span><span class='op'>::</span><span class='const'>TOP</span>
@@ -1024,13 +1030,13 @@ Event is activated.</p>
       <pre class="lines">
 
 
-66
-67
-68
-69</pre>
+69
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_action'>set_action</span><span class='lparen'>(</span><span class='id identifier rubyid_action_manager'>action_manager</span><span class='rparen'>)</span>
 	<span class='ivar'>@action_manager</span> <span class='op'>=</span> <span class='id identifier rubyid_action_manager'>action_manager</span>
@@ -1067,18 +1073,26 @@ Event is activated.</p>
       <pre class="lines">
 
 
-73
-74
-75
 76
-77</pre>
+77
+78
+79
+80
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'event.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'event.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
 	<span class='kw'>super</span>
-	<span class='ivar'>@activated</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_current_action'>current_action</span> <span class='op'>==</span> <span class='kw'>nil</span>
+	<span class='kw'>if</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_current_action'>current_action</span> <span class='op'>==</span> <span class='kw'>nil</span>
+		<span class='ivar'>@activated</span> <span class='op'>=</span> <span class='kw'>false</span>
+		<span class='ivar'>@character</span><span class='period'>.</span><span class='id identifier rubyid_sensitive'>sensitive</span> <span class='op'>=</span> <span class='kw'>true</span>
+		<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
+	<span class='kw'>end</span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='ivar'>@activated</span>		
 <span class='kw'>end</span></pre>
     </td>
@@ -1091,7 +1105,7 @@ Event is activated.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 10 08:28:38 2015 by
+  Generated on Tue Feb 10 08:52:33 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

@@ -19,9 +19,11 @@ module Examples
 			ev002 = Event.new self, 'res/char/superman.png', 4, 3 * Map::TILE_SIZE, 4 * Map::TILE_SIZE
 
 			ev001.action_manager.push Act::Message.new(self, 'This is an example to use class Message...')
-			ev001.action_manager.push Act::Message.new(self, 'And understand a bit the ActionManager.')
+			ev001.action_manager.push Act::Codeblock.new(self, Proc.new do 
+				$sw_1 = true
+			end)
 	
-			ev002.action_manager.push Act::Condition.new(self, '0 == 0', [
+			ev002.action_manager.push Act::Condition.new(self, '$sw_1 == true', [
 				Act::Message.new(self, 'Dark...'), 
 				Act::Fade.new(self, 255, 1), 
 				Act::Fade.new(self, 0, 1)

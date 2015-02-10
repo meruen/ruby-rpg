@@ -37,13 +37,16 @@ class Event < Character
 	end
 
 	# Callback to execute when Character is colliding and press the action key.
-	# @param [Direction] direction Direction that Character have when act.
+	# @param [Direction] character Character pressing.
 	# @param [true/false] look True if the Event must look to Character when act.
 	# @return [void]
-	def on_press(direction, look = true)
+	def on_press(character, look = true)
+		@character = character
+		direction = character.direction
 		if !@activated
 			@activated = true
 			@action_manager.restart
+			character.sensitive = false
 		end
 		case direction
 			when Direction::TOP
@@ -72,7 +75,11 @@ class Event < Character
 	# @return [void]
 	def update
 		super
-		@activated = false if @action_manager.current_action == nil
+		if @action_manager.current_action == nil
+			@activated = false
+			@character.sensitive = true
+			@action_manager.restart
+		end
 		@action_manager.update if @activated		
 	end
 

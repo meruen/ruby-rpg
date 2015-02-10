@@ -77,7 +77,8 @@ class Map
 			event.z = ZEV_TOP if event.y < @characters[0].y						
 
 			if @key_act && !@last_key_act && colliding?(@characters[0], event)
-				event.on_press @characters[0].direction
+				#event.on_press @characters[0].direction
+				event.on_press @characters[0]
 			end
 		end
 		@characters.each do |character| character.update end

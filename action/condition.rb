@@ -41,8 +41,6 @@ module Act
 			@evalued = true if eval(@str)
 			@action_manager.update if @evalued
 			@else_action_manager.update if (!@evalued && @else_action_manager != nil)
-			#finish if (!@evalued && @else_action_manager.action != nil) || @action_manager.finished || @else_action_manager.finished
-			#puts "evalued: #{@evalued} act #{@action_manager.finished} eact #{@else_action_manager.finished}"
 			el = @else_action_manager != nil ? @else_action_manager.finished : false
 			finish if @action_manager.finished || el
 		end

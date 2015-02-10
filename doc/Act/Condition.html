@@ -704,14 +704,14 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
+61
+62
 63
 64
-65
-66
-67</pre>
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='ivar'>@evalued</span> <span class='kw'>then</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>else</span> 
@@ -749,16 +749,16 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
+50
+51
 52
 53
 54
 55
-56
-57
-58</pre>
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span>
 	<span class='kw'>super</span>
@@ -851,9 +851,7 @@ condition is satisfied.</p>
 43
 44
 45
-46
-47
-48</pre>
+46</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'action/condition.rb', line 40</span>
@@ -862,9 +860,7 @@ condition is satisfied.</p>
 	<span class='ivar'>@evalued</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='ivar'>@str</span><span class='rparen'>)</span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='ivar'>@evalued</span>
 	<span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@evalued</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@else_action_manager</span> <span class='op'>!=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-	<span class='comment'>#finish if (!@evalued &amp;&amp; @else_action_manager.action != nil) || @action_manager.finished || @else_action_manager.finished
-</span>	<span class='comment'>#puts &quot;evalued: #{@evalued} act #{@action_manager.finished} eact #{@else_action_manager.finished}&quot;
-</span>	<span class='id identifier rubyid_el'>el</span> <span class='op'>=</span> <span class='ivar'>@else_action_manager</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='op'>?</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>:</span> <span class='kw'>false</span>
+	<span class='id identifier rubyid_el'>el</span> <span class='op'>=</span> <span class='ivar'>@else_action_manager</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='op'>?</span> <span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>:</span> <span class='kw'>false</span>
 	<span class='id identifier rubyid_finish'>finish</span> <span class='kw'>if</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>||</span> <span class='id identifier rubyid_el'>el</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -877,7 +873,7 @@ condition is satisfied.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 10 08:28:38 2015 by
+  Generated on Tue Feb 10 08:52:33 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>
