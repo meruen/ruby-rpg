@@ -80,8 +80,6 @@ class Event < Character
 	# @return [void]
 	def draw
 		super @z
-		#@actions[@actual_action].draw(@handle.map.camera) if @actions[@actual_action] != nil && @activated
 		@action_manager.draw @handle.map.camera if @activated
-		
 	end
 end

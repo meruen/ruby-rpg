@@ -40,15 +40,20 @@ module Act
 		def update
 			@evalued = true if eval(@str)
 			@action_manager.update if @evalued
-			@else_action_manager.update if !@evalued
-			finish if (!@evalued && @else_action_manager.action != nil) || @action_manager.finished || @else_action_manager.finished
+			@else_action_manager.update if (!@evalued && @else_action_manager != nil)
+			#finish if (!@evalued && @else_action_manager.action != nil) || @action_manager.finished || @else_action_manager.finished
+			#puts "evalued: #{@evalued} act #{@action_manager.finished} eact #{@else_action_manager.finished}"
+			el = @else_action_manager != nil ? @else_action_manager.finished : false
+			finish if @action_manager.finished || el
 		end
 
 		# Finish the internal ActionManager.
 		# @return [void]
 		def finish
 			super
+			puts 'aaa'
 			@action_manager.restart
+			@else_action_manager.restart if @else_action_manager != nil
 			@evalued = false
 		end
 
@@ -59,7 +64,6 @@ module Act
 			if @evalued then @action_manager.draw(camera) else 
 				if @else_action_manager.action != nil then @else_action_manager.draw(camera) end
 			end
-
 		end
 	end
 end

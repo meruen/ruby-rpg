@@ -15,22 +15,24 @@ module Examples
 			
 	
 			character = Character.new self, 'res/char/superman_prime_01.png', 4, 256, 256
-		        ev001 = Event.new self, 'res/char/superman.png', 4, 6 * Map::TILE_SIZE, 5 * Map::TILE_SIZE
+	        ev001 = Event.new self, 'res/char/superman.png', 4, 6 * Map::TILE_SIZE, 5 * Map::TILE_SIZE
 			ev002 = Event.new self, 'res/char/superman.png', 4, 3 * Map::TILE_SIZE, 4 * Map::TILE_SIZE
 
 			ev001.action_manager.push Act::Message.new(self, 'This is an example to use class Message...')
 			ev001.action_manager.push Act::Message.new(self, 'And understand a bit the ActionManager.')
 	
-			#ev002.action_manager.push Act::Message.new(self, 'Seems ok.')
 			ev002.action_manager.push Act::Condition.new(self, '0 == 0', [
 				Act::Message.new(self, 'Dark...'), 
 				Act::Fade.new(self, 255, 1), 
 				Act::Fade.new(self, 0, 1)
+			], [
+				Act::Message.new(self, 'teste'), 
+				Act::Message.new(self, '...')
 			])
 
-	        	self.map.events.push ev001
+        	self.map.events.push ev001
 			self.map.events.push ev002
-	        	self.map.characters.push character
+        	self.map.characters.push character
 		end
 	end
 end
