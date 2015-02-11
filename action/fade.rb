@@ -13,7 +13,7 @@ module Act
 		attr_accessor :style
 		attr_accessor :speed
 
-		def initialize(handle, light, speed = 100)
+		def initialize(handle, light, speed = 1)
 			super handle, nil
 			@speed = speed
 			@light = light
@@ -22,11 +22,7 @@ module Act
 
 		def prepare
 			@timer = Timer.new @speed
-			if @handle.light > @light 
-				@style = Act::Fade::OUT
-			else 
-				@style = Act::Fade::IN
-			end
+			if @handle.light > @light then @style = Act::Fade::OUT else @style = Act::Fade::IN end
 			self.finished = false
 		end
 

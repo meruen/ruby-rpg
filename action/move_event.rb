@@ -17,7 +17,7 @@ module Act
 		# @param [Integer] steps Stepos to move.
 		# @param [Direction] direction Direction to move.
 		# @param [Integer] speed Movement speed.
-		def initialize(handle, event, steps, direction, speed)
+		def initialize(handle, event, steps, direction, speed = 1)
 			super handle, nil
 			@event = event
 			@steps = steps
@@ -29,6 +29,7 @@ module Act
 		# Internal function tu prepare the action.
 		# @return [void]
 		def prepare
+			puts 'prepared'
 			@start_block_x = @event.x / Map::TILE_SIZE
 			@start_block_y = @event.y / Map::TILE_SIZE
 
@@ -52,8 +53,6 @@ module Act
 			super
 			@event.state = State::MOV
 			@event.direction = @direction
-
-			puts "#{@event.x} -- #{@end_position}"
 
 			case @direction
 				when Direction::TOP

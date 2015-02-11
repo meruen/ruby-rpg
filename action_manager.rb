@@ -43,6 +43,7 @@ class ActionManager < Action
 	# Restart all the actions and unfinish the ActionManager. So you can run all the actions again and again from the beginning.
 	# @return [void]
 	def restart
+		@action[0].prepare if @action[0] != nil
 		@current_action_index = 0
 		@current_action = @action[@current_action_index]
 		self.finished = false
@@ -57,7 +58,8 @@ class ActionManager < Action
 			@current_action.update
 			if @current_action.finished
 				@current_action_index += 1
-				@action[@current_action_index - 1].prepare if @action[@current_action_index - 1] != nil
+				#@action[@current_action_index - 1].prepare if @action[@current_action_index - 1] != nil
+				@action[@current_action_index].prepare if @action[@current_action_index] != nil
 			end	
 		else
 			self.finish
@@ -69,6 +71,6 @@ class ActionManager < Action
 	# @return [void]
 	def draw(camera)
 		super camera
-		@current_action.draw(camera) if @current_action != nil
+		@current_action.draw(camera) if @current_action != nil && !@current_action.finished
 	end
 end

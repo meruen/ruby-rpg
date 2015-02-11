@@ -49,7 +49,6 @@ module Act
 		# @return [void]
 		def finish
 			super
-			puts 'aaa'
 			@action_manager.restart
 			@else_action_manager.restart if @else_action_manager != nil
 			@evalued = false
