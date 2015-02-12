@@ -58,9 +58,10 @@ class ActionManager < Action
 			@current_action.update
 			if @current_action.finished
 				@current_action_index += 1
-				#@action[@current_action_index - 1].prepare if @action[@current_action_index - 1] != nil
 				@action[@current_action_index].prepare if @action[@current_action_index] != nil
+				self.finish if @action[@current_action_index] == nil
 			end	
+		
 		else
 			self.finish
 		end
@@ -71,6 +72,6 @@ class ActionManager < Action
 	# @return [void]
 	def draw(camera)
 		super camera
-		@current_action.draw(camera) if @current_action != nil && !@current_action.finished
+		@current_action.draw(camera) if @current_action != nil# && !@current_action.finished
 	end
 end

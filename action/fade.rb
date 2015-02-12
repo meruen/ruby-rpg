@@ -1,9 +1,7 @@
-# encoding: utf-8
-
 require 'gosu'
 
-load 'action.rb'
-load 'timer.rb'
+require './action.rb'
+require './timer.rb'
 
 module Act
 	class Fade < Action
@@ -13,7 +11,7 @@ module Act
 		attr_accessor :style
 		attr_accessor :speed
 
-		def initialize(handle, light, speed = 1)
+		def initialize(handle, light, speed = 0)
 			super handle, nil
 			@speed = speed
 			@light = light

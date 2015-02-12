@@ -34,8 +34,8 @@ module Examples
 			# Add a condition to ev002
 			ev002.action_manager.push Act::Condition.new(self, '$sw_1 == true', [ # if $sw_1 is 'true' then
 				Act::Message.new(self, 'Dark...'), 
-				Act::Fade.new(self, 255, 1), 
-				Act::Fade.new(self, 0, 1)
+				Act::Fade.new(self, 255), 
+				Act::Fade.new(self, 0)
 			], [ # else
 				Act::Message.new(self, 'teste'), 
 				Act::Message.new(self, '...')
