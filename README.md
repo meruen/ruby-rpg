@@ -1,6 +1,9 @@
 # ruby-rpg
 A fast RPG Framework for Ruby using libgosu.
 
+# Website
+You can check all the documentation and tutorials at [Ruby-rpg website](http://ruby-rpg.chickenkiller.com).
+
 # How to set up your Linux
 * You must have [Ruby](https://www.ruby-lang.org/) installed (2.1 is recomended).
 * Install libgosu dependencies:
