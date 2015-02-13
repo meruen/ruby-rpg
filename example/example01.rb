@@ -3,20 +3,22 @@
 load 'gamebox.rb'
 load 'frame.rb'
 load 'jazz.rb'
-load 'action/move_sequence.rb'
+load 'cursor.rb'
 
 module Examples
 	class Example01 < Gamebox
 		def initialize
 			super
-			#Change title of project.
+			# Change title of project.
 	        self.caption =  'Example01'
-			#Create the main map.
+			# Create the main map.
         	self.map = Map.new self, 'map/map01generic.map', 'res/chip/town08a.png', 30, 16, 'res/chip/map01.png', true
-			#Initializes Jazz... Responsible for all project sound resources.
+			# Initializes Jazz... Responsible for all project sound resources.
 			@jazz = Jazz.new self, 'res/bgm', 'res/se'
-			#Play mm2.ogg
+			# Play mm2.ogg
 			@jazz.play_bgm 'mm2'
+			# Create a custom cursor
+			self.cursor = Cursor.new self, 'res/sys/cursor32.png'
 			
 			# Create the main Character
 			character = Character.new self, 'res/char/superman_prime_01.png', 4, 256, 256

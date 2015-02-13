@@ -5,6 +5,7 @@ load 'character.rb'
 load 'map.rb'
 load 'camera.rb'
 load 'event.rb'
+load 'cursor.rb'
 load 'action/message.rb'
 load 'action/condition.rb'
 load 'action/codeblock.rb'
@@ -25,6 +26,8 @@ class Gamebox < Gosu::Window
 	attr_reader :screen_h
 	# @return [Fixnum] Luminosity of screen (0...255).
 	attr_accessor :light
+	# @return [Cursor] Cursor.
+	attr_accessor :cursor
 
 	# @param [Fixnum] screen_w Screen width.
 	# @param [Fixnum] screen_h Screen height.
@@ -42,6 +45,7 @@ class Gamebox < Gosu::Window
 	# Update your game.
 	# @return [void]
 	def update
+		@cursor.update if @cursor != nil
 		@map.update if @map != nil		
 		@light_color = Gosu::Color.new @light, 0, 0, 0
 	end
@@ -49,6 +53,7 @@ class Gamebox < Gosu::Window
 	# Draw the content of your game.
 	# @return [void]
 	def draw
+		@cursor.draw if @cursor != nil
 		@map.draw if @map != nil
 		self.draw_quad 0, 0, @light_color, @screen_w, 0, @light_color, 0, @screen_h, @light_color, @screen_w, @screen_h, @light_color, 2
 	end

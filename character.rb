@@ -1,17 +1,13 @@
 # encoding: utf-8
 # character.rb
 
-require 'gosu'
+load 'gameobject.rb'
 load 'mod/Direction.rb'
 load 'mod/State.rb'
 load 'mod/controls.rb'
 
 # Class for playable characters. 
-class Character
-	# @return [Integer] X coordinate.
-	attr_accessor :x
-	# @return [Integer] Y coordinate.
-	attr_accessor :y
+class Character < GameObject
 	# @return [Integer] Movement speed.
 	attr_accessor :speed
 	# @return [Integer] Tile block X coordinate.
@@ -41,19 +37,18 @@ class Character
 	# @param [true/false] visible Visibility of character.
 	# @param [true/false] sensitive True if the character will respond to keyboard.
 	def initialize(handle, filename, hblock = 4, x = 0, y = 0, speed = 2, visible = true, sensitive = true)
+		super handle, x, y
 		@energy = 400
 		@speed = speed
 		@sensitive = sensitive
 		@state = State::IDLE
 		@direction = Direction::BOT
 		@hblock = hblock
-		@handle = handle
 		@filename = filename
 		@anim = Hash.new
 		@keys = Hash.new
 		@visible = visible
 		set_img filename, hblock
-		set_location x, y
 	end
 
 	# Set a new sprite for the character.

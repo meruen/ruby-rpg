@@ -78,6 +78,8 @@
         <ul class="fullTree">
           <li>Object</li>
           
+            <li class="next"><span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></li>
+          
             <li class="next"><span class='object_link'><a href="Action.html" title="Action (class)">Action</a></span></li>
           
             <li class="next">ActionManager</li>
@@ -115,7 +117,11 @@ the ActionManager will execute the actions one after another.</p>
 <div class="tags">
   
 
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Act/MoveSequence.html" title="Act::MoveSequence (class)">Act::MoveSequence</a></span></p>
 </div>
+
 
 
 
@@ -210,7 +216,12 @@ the ActionManager will execute the actions one after another.</p>
   
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Action.html" title="Action (class)">Action</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Action.html#drw_func-instance_method" title="Action#drw_func (method)">#drw_func</a></span>, <span class='object_link'><a href="Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>, <span class='object_link'><a href="Action.html#handle-instance_method" title="Action#handle (method)">#handle</a></span>, <span class='object_link'><a href="Action.html#ini_func-instance_method" title="Action#ini_func (method)">#ini_func</a></span>, <span class='object_link'><a href="Action.html#upd_func-instance_method" title="Action#upd_func (method)">#upd_func</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Action.html#drw_func-instance_method" title="Action#drw_func (method)">#drw_func</a></span>, <span class='object_link'><a href="Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>, <span class='object_link'><a href="Action.html#ini_func-instance_method" title="Action#ini_func (method)">#ini_func</a></span>, <span class='object_link'><a href="Action.html#upd_func-instance_method" title="Action#upd_func (method)">#upd_func</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="GameObject.html#handle-instance_method" title="GameObject#handle (method)">#handle</a></span>, <span class='object_link'><a href="GameObject.html#x-instance_method" title="GameObject#x (method)">#x</a></span>, <span class='object_link'><a href="GameObject.html#y-instance_method" title="GameObject#y (method)">#y</a></span></p>
 
 
   
@@ -381,7 +392,13 @@ the ActionManager will execute the actions one after another.</p>
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Action.html" title="Action (class)">Action</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Action.html#finish-instance_method" title="Action#finish (method)">#finish</a></span>, <span class='object_link'><a href="Action.html#prepare-instance_method" title="Action#prepare (method)">#prepare</a></span></p>
-<div id="constructor_details" class="method_details_list">
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -720,18 +737,18 @@ the ActionManager will execute the actions one after another.</p>
       <pre class="lines">
 
 
-70
-71
-72
-73</pre>
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action_manager.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'action_manager.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span>
 	<span class='kw'>super</span> <span class='id identifier rubyid_camera'>camera</span>
-	<span class='ivar'>@current_action</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@current_action</span> <span class='op'>!=</span> <span class='kw'>nil</span>
-<span class='kw'>end</span></pre>
+	<span class='ivar'>@current_action</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@current_action</span> <span class='op'>!=</span> <span class='kw'>nil</span><span class='comment'># &amp;&amp; !@current_action.finished
+</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -911,12 +928,14 @@ the actions again and again from the beginning.</p>
 46
 47
 48
-49</pre>
+49
+50</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'action_manager.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restart'>restart</span>
+	<span class='ivar'>@action</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_prepare'>prepare</span> <span class='kw'>if</span> <span class='ivar'>@action</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>
 	<span class='ivar'>@current_action_index</span> <span class='op'>=</span> <span class='int'>0</span>
 	<span class='ivar'>@current_action</span> <span class='op'>=</span> <span class='ivar'>@action</span><span class='lbracket'>[</span><span class='ivar'>@current_action_index</span><span class='rbracket'>]</span>
 	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -954,7 +973,6 @@ action manager.</p>
       <pre class="lines">
 
 
-53
 54
 55
 56
@@ -966,10 +984,13 @@ action manager.</p>
 62
 63
 64
-65</pre>
+65
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action_manager.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'action_manager.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
 	<span class='kw'>super</span>
@@ -978,8 +999,10 @@ action manager.</p>
 		<span class='ivar'>@current_action</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span>
 		<span class='kw'>if</span> <span class='ivar'>@current_action</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span>
 			<span class='ivar'>@current_action_index</span> <span class='op'>+=</span> <span class='int'>1</span>
-			<span class='ivar'>@action</span><span class='lbracket'>[</span><span class='ivar'>@current_action_index</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_prepare'>prepare</span> <span class='kw'>if</span> <span class='ivar'>@action</span><span class='lbracket'>[</span><span class='ivar'>@current_action_index</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>
+			<span class='ivar'>@action</span><span class='lbracket'>[</span><span class='ivar'>@current_action_index</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_prepare'>prepare</span> <span class='kw'>if</span> <span class='ivar'>@action</span><span class='lbracket'>[</span><span class='ivar'>@current_action_index</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>
+			<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_finish'>finish</span> <span class='kw'>if</span> <span class='ivar'>@action</span><span class='lbracket'>[</span><span class='ivar'>@current_action_index</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='kw'>nil</span>
 		<span class='kw'>end</span>	
+	
 	<span class='kw'>else</span>
 		<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_finish'>finish</span>
 	<span class='kw'>end</span>
@@ -994,7 +1017,7 @@ action manager.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 10 08:52:33 2015 by
+  Generated on Fri Feb 13 10:03:27 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

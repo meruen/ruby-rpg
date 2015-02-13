@@ -78,6 +78,8 @@
         <ul class="fullTree">
           <li>Object</li>
           
+            <li class="next"><span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></li>
+          
             <li class="next"><span class='object_link'><a href="Character.html" title="Character (class)">Character</a></span></li>
           
             <li class="next">Event</li>
@@ -211,7 +213,12 @@ activated.</p>
   
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Character.html" title="Character (class)">Character</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Character.html#block_x-instance_method" title="Character#block_x (method)">#block_x</a></span>, <span class='object_link'><a href="Character.html#block_y-instance_method" title="Character#block_y (method)">#block_y</a></span>, <span class='object_link'><a href="Character.html#direction-instance_method" title="Character#direction (method)">#direction</a></span>, <span class='object_link'><a href="Character.html#img-instance_method" title="Character#img (method)">#img</a></span>, <span class='object_link'><a href="Character.html#sensitive-instance_method" title="Character#sensitive (method)">#sensitive</a></span>, <span class='object_link'><a href="Character.html#speed-instance_method" title="Character#speed (method)">#speed</a></span>, <span class='object_link'><a href="Character.html#state-instance_method" title="Character#state (method)">#state</a></span>, <span class='object_link'><a href="Character.html#visible-instance_method" title="Character#visible (method)">#visible</a></span>, <span class='object_link'><a href="Character.html#x-instance_method" title="Character#x (method)">#x</a></span>, <span class='object_link'><a href="Character.html#y-instance_method" title="Character#y (method)">#y</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Character.html#block_x-instance_method" title="Character#block_x (method)">#block_x</a></span>, <span class='object_link'><a href="Character.html#block_y-instance_method" title="Character#block_y (method)">#block_y</a></span>, <span class='object_link'><a href="Character.html#direction-instance_method" title="Character#direction (method)">#direction</a></span>, <span class='object_link'><a href="Character.html#img-instance_method" title="Character#img (method)">#img</a></span>, <span class='object_link'><a href="Character.html#sensitive-instance_method" title="Character#sensitive (method)">#sensitive</a></span>, <span class='object_link'><a href="Character.html#speed-instance_method" title="Character#speed (method)">#speed</a></span>, <span class='object_link'><a href="Character.html#state-instance_method" title="Character#state (method)">#state</a></span>, <span class='object_link'><a href="Character.html#visible-instance_method" title="Character#visible (method)">#visible</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="GameObject.html" title="GameObject (class)">GameObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="GameObject.html#handle-instance_method" title="GameObject#handle (method)">#handle</a></span>, <span class='object_link'><a href="GameObject.html#x-instance_method" title="GameObject#x (method)">#x</a></span>, <span class='object_link'><a href="GameObject.html#y-instance_method" title="GameObject#y (method)">#y</a></span></p>
 
 
   
@@ -391,7 +398,13 @@ activated.</p>
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Character.html" title="Character (class)">Character</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Character.html#quaded%3F-instance_method" title="Character#quaded? (method)">#quaded?</a></span>, <span class='object_link'><a href="Character.html#read_keys-instance_method" title="Character#read_keys (method)">#read_keys</a></span>, <span class='object_link'><a href="Character.html#set_img-instance_method" title="Character#set_img (method)">#set_img</a></span>, <span class='object_link'><a href="Character.html#set_location-instance_method" title="Character#set_location (method)">#set_location</a></span>, <span class='object_link'><a href="Character.html#visible%3F-instance_method" title="Character#visible? (method)">#visible?</a></span></p>
-<div id="constructor_details" class="method_details_list">
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -800,7 +813,7 @@ activated.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
 	<span class='kw'>super</span> <span class='ivar'>@z</span>
-	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_camera'>camera</span> <span class='kw'>if</span> <span class='ivar'>@activated</span>
+	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='ivar'>@handle</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='period'>.</span><span class='id identifier rubyid_camera'>camera</span> <span class='kw'>if</span> <span class='ivar'>@activated</span> <span class='kw'>and</span> <span class='op'>!</span><span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_finished'>finished</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1105,7 +1118,7 @@ Event is activated.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 10 08:52:33 2015 by
+  Generated on Fri Feb 13 10:03:28 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

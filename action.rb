@@ -3,11 +3,9 @@
 require 'gosu'
 
 # Action class is a single drawable component that is handled by ActionManager.
-class Action
+class Action < GameObject
 	# @return [true/false] true if the action is actually finished.
 	attr_accessor :finished
-	# @return [Gamebox] main Gamebox class.
-	attr_accessor :handle
 	# @return [Proc] function that will be executed before the initialization of action.
 	attr_accessor :ini_func
 	# @return [Proc] function that will be executed before the update of action.
@@ -20,7 +18,7 @@ class Action
 	# @param [Proc] upd_func function that will be executed before the update method of action.
 	# @param [Proc] drw_func function that will be executed before the draw method of action.
 	def initialize(handle, ini_func = nil, upd_func = nil, drw_func = nil)
-		@handle = handle
+		super handle
 		@finished = false
 		@upd_func = upd_func
 		@drw_func = drw_func

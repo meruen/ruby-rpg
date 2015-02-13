@@ -1,14 +1,14 @@
 # encoding: utf-8
 # map.rb
 
-require 'gosu'
+load 'gameobject.rb'
 load 'camera.rb'
 load 'mod/Direction.rb'
 load 'mod/tile.rb'
 
 # This is the main class for managment of .map files. 
 # Note: ACCTUALY IS UNDER MAINTENANCE.
-class Map
+class Map < GameObject
 	# @return [String] Path to tilesed used to build map.
 	attr_reader :chip
 	# @return [Integer] Width of the map.
@@ -37,8 +37,8 @@ class Map
 	# @param [String] background Path to background that will be printed behind the chipset.
 	# @param [true/false] only_background True if you want that the chipset don't be printed.
 	def initialize(handle, filename, chip, rows, cols, background = nil, only_background = false)
+		super handle
 		@camera = Camera.new
-		@handle = handle
 		@filename = filename
 		@chip = chip
 		@rows = rows

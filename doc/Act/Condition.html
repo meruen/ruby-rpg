@@ -78,6 +78,8 @@
         <ul class="fullTree">
           <li>Object</li>
           
+            <li class="next"><span class='object_link'><a href="../GameObject.html" title="GameObject (class)">GameObject</a></span></li>
+          
             <li class="next"><span class='object_link'><a href="../Action.html" title="Action (class)">Action</a></span></li>
           
             <li class="next">Act::Condition</li>
@@ -209,7 +211,12 @@ condition is satisfied.</p>
   
   
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Action.html" title="Action (class)">Action</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Action.html#drw_func-instance_method" title="Action#drw_func (method)">#drw_func</a></span>, <span class='object_link'><a href="../Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>, <span class='object_link'><a href="../Action.html#handle-instance_method" title="Action#handle (method)">#handle</a></span>, <span class='object_link'><a href="../Action.html#ini_func-instance_method" title="Action#ini_func (method)">#ini_func</a></span>, <span class='object_link'><a href="../Action.html#upd_func-instance_method" title="Action#upd_func (method)">#upd_func</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Action.html#drw_func-instance_method" title="Action#drw_func (method)">#drw_func</a></span>, <span class='object_link'><a href="../Action.html#finished-instance_method" title="Action#finished (method)">#finished</a></span>, <span class='object_link'><a href="../Action.html#ini_func-instance_method" title="Action#ini_func (method)">#ini_func</a></span>, <span class='object_link'><a href="../Action.html#upd_func-instance_method" title="Action#upd_func (method)">#upd_func</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../GameObject.html" title="GameObject (class)">GameObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../GameObject.html#handle-instance_method" title="GameObject#handle (method)">#handle</a></span>, <span class='object_link'><a href="../GameObject.html#x-instance_method" title="GameObject#x (method)">#x</a></span>, <span class='object_link'><a href="../GameObject.html#y-instance_method" title="GameObject#y (method)">#y</a></span></p>
 
 
   
@@ -346,6 +353,12 @@ condition is satisfied.</p>
   
 
 
+  
+  
+  
+  
+  
+  
   
   
   
@@ -704,14 +717,14 @@ condition is satisfied.</p>
       <pre class="lines">
 
 
+60
 61
 62
 63
-64
-65</pre>
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'action/condition.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'action/condition.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span>
 	<span class='kw'>if</span> <span class='ivar'>@evalued</span> <span class='kw'>then</span> <span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span><span class='lparen'>(</span><span class='id identifier rubyid_camera'>camera</span><span class='rparen'>)</span> <span class='kw'>else</span> 
@@ -754,15 +767,13 @@ condition is satisfied.</p>
 52
 53
 54
-55
-56</pre>
+55</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'action/condition.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finish'>finish</span>
 	<span class='kw'>super</span>
-	<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>aaa</span><span class='tstring_end'>&#39;</span></span>
 	<span class='ivar'>@action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
 	<span class='ivar'>@else_action_manager</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span> <span class='kw'>if</span> <span class='ivar'>@else_action_manager</span> <span class='op'>!=</span> <span class='kw'>nil</span>
 	<span class='ivar'>@evalued</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -873,7 +884,7 @@ condition is satisfied.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 10 08:52:33 2015 by
+  Generated on Fri Feb 13 10:03:27 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

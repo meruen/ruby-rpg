@@ -127,6 +127,33 @@ magic begins.</p>
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#cursor-instance_method" title="#cursor (instance method)">- (Cursor) <strong>cursor</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Cursor.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#light-instance_method" title="#light (instance method)">- (Fixnum) <strong>light</strong> </a>
     
 
@@ -459,17 +486,17 @@ magic begins.</p>
       <pre class="lines">
 
 
-33
-34
-35
 36
 37
 38
 39
-40</pre>
+40
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_screen_w'>screen_w</span> <span class='op'>=</span> <span class='int'>640</span><span class='comma'>,</span> <span class='id identifier rubyid_screen_h'>screen_h</span> <span class='op'>=</span> <span class='int'>480</span><span class='comma'>,</span> <span class='id identifier rubyid_light'>light</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_fullscreen'>fullscreen</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
 	<span class='kw'>super</span> <span class='id identifier rubyid_screen_w'>screen_w</span><span class='comma'>,</span> <span class='id identifier rubyid_screen_h'>screen_h</span><span class='comma'>,</span> <span class='id identifier rubyid_fullscreen'>fullscreen</span>
@@ -490,9 +517,70 @@ magic begins.</p>
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="light=-instance_method"></span>
+      <span id="cursor=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="light-instance_method">
+  <h3 class="signature first" id="cursor-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Cursor.html" title="Cursor (class)">Cursor</a></span></tt>) <strong>cursor</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Cursor.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Cursor.html" title="Cursor (class)">Cursor</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Cursor.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cursor'>cursor</span>
+  <span class='ivar'>@cursor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="light=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="light-instance_method">
   
     - (<tt>Fixnum</tt>) <strong>light</strong> 
   
@@ -535,12 +623,12 @@ magic begins.</p>
       <pre class="lines">
 
 
-27
 28
-29</pre>
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_light'>light</span>
   <span class='ivar'>@light</span>
@@ -596,12 +684,12 @@ magic begins.</p>
       <pre class="lines">
 
 
-19
 20
-21</pre>
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_map'>map</span>
   <span class='ivar'>@map</span>
@@ -658,12 +746,12 @@ here.</p>
       <pre class="lines">
 
 
-21
 22
-23</pre>
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_maps'>maps</span>
   <span class='ivar'>@maps</span>
@@ -719,12 +807,12 @@ here.</p>
       <pre class="lines">
 
 
-25
 26
-27</pre>
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_screen_h'>screen_h</span>
   <span class='ivar'>@screen_h</span>
@@ -780,12 +868,12 @@ here.</p>
       <pre class="lines">
 
 
-23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_screen_w'>screen_w</span>
   <span class='ivar'>@screen_w</span>
@@ -828,15 +916,17 @@ here.</p>
       <pre class="lines">
 
 
-51
-52
-53
-54</pre>
+55
+56
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_draw'>draw</span>
+	<span class='ivar'>@cursor</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='kw'>if</span> <span class='ivar'>@cursor</span> <span class='op'>!=</span> <span class='kw'>nil</span>
 	<span class='ivar'>@map</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span> <span class='kw'>if</span> <span class='ivar'>@map</span> <span class='op'>!=</span> <span class='kw'>nil</span>
 	<span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_draw_quad'>draw_quad</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='ivar'>@screen_w</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@screen_h</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='ivar'>@screen_w</span><span class='comma'>,</span> <span class='ivar'>@screen_h</span><span class='comma'>,</span> <span class='ivar'>@light_color</span><span class='comma'>,</span> <span class='int'>2</span>
 <span class='kw'>end</span></pre>
@@ -871,15 +961,17 @@ here.</p>
       <pre class="lines">
 
 
-44
-45
-46
-47</pre>
+47
+48
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'gamebox.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'gamebox.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+	<span class='ivar'>@cursor</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='ivar'>@cursor</span> <span class='op'>!=</span> <span class='kw'>nil</span>
 	<span class='ivar'>@map</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span> <span class='kw'>if</span> <span class='ivar'>@map</span> <span class='op'>!=</span> <span class='kw'>nil</span>		
 	<span class='ivar'>@light_color</span> <span class='op'>=</span> <span class='const'>Gosu</span><span class='op'>::</span><span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='ivar'>@light</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
 <span class='kw'>end</span></pre>
@@ -893,7 +985,7 @@ here.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 10 08:52:33 2015 by
+  Generated on Fri Feb 13 10:03:28 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.5).
 </div>

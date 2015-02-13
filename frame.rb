@@ -1,15 +1,9 @@
 # encoding: utf-8
 
-require 'gosu'
+require './gameobject.rb'
 
 # Amazing class that build frames without resources.
-class Frame
-	# @return [Gamebox] Main Gamebox.
-	attr_accessor :handle
-	# @return [Integer] X coordinate.
-	attr_accessor :x
-	# @return [Integer] Y coordinate.
-	attr_accessor :y
+class Frame < GameObject
 	# @return [Integer] Width.
 	attr_accessor :w
 	# @return [Integer] Height.
@@ -27,7 +21,7 @@ class Frame
 	# @param [Integer] a Alpha value.
 	# @param [Integer] z Z order.
 	def initialize(handle, x, y, w, h, a = 255, z = 0)
-		@handle = handle	
+		super handle, x, y	
 		@x = x
 		@y = y
 		@w = w
